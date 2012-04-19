@@ -50,16 +50,16 @@ namespace Suteki.Shop.Controllers
 		}
 
 		[AdministratorsOnly, AcceptVerbs(HttpVerbs.Post), UnitOfWork]
-		public ActionResult Edit(Menu menu)
+		public ActionResult Edit(Menu content)
 		{
-            CheckForDuplicateName(menu);
+            CheckForDuplicateName(content);
 			if (ModelState.IsValid)
 			{
 				Message = "Changes have been saved.";
-				return this.RedirectToAction(c => c.List(menu.ParentContent.Id));
+				return this.RedirectToAction(c => c.List(content.ParentContent.Id));
 			}
 
-            return View("Edit", CmsView.Data.WithContent(menu));
+            return View("Edit", CmsView.Data.WithContent(content));
 		}
 
 		[AdministratorsOnly]
@@ -78,17 +78,17 @@ namespace Suteki.Shop.Controllers
 		}
 
 		[AcceptVerbs(HttpVerbs.Post), AdministratorsOnly, UnitOfWork]
-		public ActionResult New([EntityBind(Fetch = false)] Menu menu)
+		public ActionResult New([EntityBind(Fetch = false)] Menu content)
 		{
-		    CheckForDuplicateName(menu);
+		    CheckForDuplicateName(content);
 			if (ModelState.IsValid)
 			{
-				menuRepository.SaveOrUpdate(menu);
+				menuRepository.SaveOrUpdate(content);
 				Message = "New menu has been successfully added.";
-                return this.RedirectToAction(c => c.List(menu.ParentContent.Id));
+                return this.RedirectToAction(c => c.List(content.ParentContent.Id));
 			}
 
-            return View("Edit", CmsView.Data.WithContent(menu));
+            return View("Edit", CmsView.Data.WithContent(content));
 		}
 
         private void CheckForDuplicateName(Content content)
