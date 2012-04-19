@@ -31,16 +31,11 @@ How to get the project working from the latest source code
 Pre-requisites
 You will need Visual Studio 2010 and a SQL Server 2008 instance.
 
-Get the source code
-Get the latest version of the code from http://code.google.com/p/sutekishop/source/checkout.
-
-(use a subversion client such as http://tortoisesvn.tigris.org/).
-
 Build
 Open the Suteki.Shop\Suteki.Shop.sln file in Visual Studio 2010. You should be able to build the solution.
 
 Create the Database
-Check the "SutekiShopConnectionString?" in Suteki.Shop\Suteki.Shop.CreateDb?\App.Config, make sure the connection string is pointing at your SQL Server database and has DB Creation rights.
+Check the "SutekiShopConnectionString" in Suteki.Shop\Suteki.Shop.CreateDb?\App.Config, make sure the connection string is pointing at your SQL Server database and has DB Creation rights.
 
 Run the Suteki.Shop.CreateDb? console project, you should see the following output:
 
