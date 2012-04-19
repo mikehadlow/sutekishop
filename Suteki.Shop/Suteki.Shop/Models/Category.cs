@@ -8,17 +8,23 @@ using Suteki.Shop.Repositories;
 
 namespace Suteki.Shop
 {
-    public class Category : IActivatable, IOrderable, INamedEntity
+    public class Category : IActivatable, IOrderable, INamedEntity, IUrlNamed
     {
         public virtual int Id { get; set; }
 
         [Required(ErrorMessage = "Name is required")]
         public virtual string Name { get; set; }
 
+        public virtual int PrestaId { get; set; }
+
         public virtual int Position { get; set; }
         public virtual bool IsActive { get; set; }
         public virtual Image Image { get; set; }
         public virtual Category Parent { get; set; }
+
+        
+        [RegularExpression(@"[\w]+", ErrorMessage = "Only alpha-numeric and underscore characters allowed")]
+        public virtual string UrlName { get; set; }
 
         IList<Category> categories = new List<Category>();
         public virtual IList<Category> Categories

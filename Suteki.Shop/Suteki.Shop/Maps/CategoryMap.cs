@@ -11,6 +11,7 @@ namespace Suteki.Shop.Maps
             Map(x => x.Name);
             Map(x => x.Position);
             Map(x => x.IsActive);
+            Map(x => x.UrlName);
 
             References(x => x.Parent);
             References(x => x.Image).Cascade.SaveUpdate();
