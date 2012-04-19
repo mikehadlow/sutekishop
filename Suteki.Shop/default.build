@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<project xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd" name="SutekiShop" default="build">
+	<property name="solution.file" value="Suteki.Shop.sln" />
+	<property name="project.file" value="Suteki.Shop\Suteki.Shop.csproj"/>
+	<property name="project.configuration" value="debug"/>
+	<property name="teamcity.dotnet.nant.nunit2.platform" value="x86" />
+
+	<!-- Nant contrib -->
+	<loadtasks assembly="nant\Nant.Contrib.Tasks.dll"/>
+	
+	<target name="build" depends="compile test" />
+
+	<target name="compile">
+		<msbuild project="${solution.file}" target="Build">
+			<property name="configuration" value="${project.configuration}" />
+			<property name="teamcity_dotnet_use_msbuild_v35" value="true"/>
+		</msbuild>
+	</target>
+
+	<target name="test">
+		<nunit2 failonerror="true" verbose="true">
+			<formatter type="Plain" />
+			<test assemblyname="Suteki.Common.Tests\bin\${project.configuration}\Suteki.Common.Tests.dll" />
+			<test assemblyname="Suteki.Shop.Tests\bin\${project.configuration}\Suteki.Shop.Tests.dll"/>
+		</nunit2>
+	</target>
+
+	<target name="compile-views">
+		<!-- Delegate the compilation of views to the CompileViews target in the csproj -->
+		<msbuild project="${project.file}" target="CompileViews">
+			<property name="configuration" value="${project.configuration}" />
+			<property name="teamcity_dotnet_use_msbuild_v35" value="true"/>
+		</msbuild>
+	</target>
+</project>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>Basket_Add_Victory</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Basket_Add_Victory</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/shop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Suteki Shop - Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Ships of the line</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Suteki Shop - Ships of the line</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='mainContent']/div/div[2]/div/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Suteki Shop - Victory</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>basketItem_size_Id</td>
+	<td>label=20cm</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>basketItem_Quantity</td>
+	<td>label=2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>addToBasket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//form[@id='basketForm']/table/tbody/tr[3]/td[2]</td>
+	<td>20cm</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//form[@id='basketForm']/table/tbody/tr[3]/td[3]</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//form[@id='basketForm']/table/tbody/tr[3]/td[4]</td>
+	<td>£300.00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//form[@id='basketForm']/table/tbody/tr[3]/td[5]</td>
+	<td>£600.00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//form[@id='basketForm']/table/tbody/tr[4]/td[5]</td>
+	<td>£1050.00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//form[@id='basketForm']/table/tbody/tr[5]/td[5]</td>
+	<td>£10.00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//form[@id='basketForm']/table/tbody/tr[7]/td[5]</td>
+	<td>£1060.00</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

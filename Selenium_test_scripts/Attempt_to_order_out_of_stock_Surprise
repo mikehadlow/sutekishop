@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>Attempt_to_order_out_of_stock_Surprise</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Attempt_to_order_out_of_stock_Surprise</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/cms/Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Online Shop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Frigates</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='mainContent']/div/div[2]/div/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>basketItem_size_Id</td>
+	<td>label=20cm Out of Stock</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>addToBasket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Suteki Shop - Surprise</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Sorry, Surprise, Size 20cm is out of stock</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

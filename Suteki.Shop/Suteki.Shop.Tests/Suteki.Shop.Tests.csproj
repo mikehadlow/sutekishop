@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BDAF0170-0C95-4C04-B444-8CC2F94FEF7F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Suteki.Shop.Tests</RootNamespace>
+    <AssemblyName>Suteki.Shop.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.2.5.2\lib\NET35\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Services.Transaction, Version=3.0.7.2007, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Castle.Services.Transaction.3.0.7.2007\lib\net40\Castle.Services.Transaction.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.2.5.3\lib\NET40\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="CookComputing.XmlRpcV2, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies.mvc3\CookComputing.XmlRpcV2.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=1.2.0.712, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentNHibernate.1.2.0.712\lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="HibernatingRhinos.Profiler.Appender, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0774796e73ebf640, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies.mvc3\HibernatingRhinos.Profiler.Appender.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.2001\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceModel.Samples.XmlRpc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=565b4392ea21ace0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies.mvc3\Microsoft.ServiceModel.Samples.XmlRpc.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib, Version=3.0.68.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvcContrib.Mvc3-ci.3.0.68.0\lib\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib.TestHelper, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcContrib.Mvc3.TestHelper-ci.3.0.68.0\lib\MvcContrib.TestHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.3.1.0.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.Castle.3.1.0.4000\lib\Net35\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="pnunit.framework, Version=1.0.4109.34242, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <HintPath>..\packages\RhinoMocks.3.6\lib\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.CoreEx">
+      <HintPath>..\packages\Rx-Core.1.0.2856.0\lib\Net4\System.CoreEx.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.65.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies.mvc3\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive">
+      <HintPath>..\packages\Rx-Interactive.1.0.2856.0\lib\Net4\System.Interactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive">
+      <HintPath>..\packages\Rx-Main.1.0.2856.0\lib\Net4\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies.mvc3\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies.mvc3\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Version.cs">
+      <Link>Version.cs</Link>
+    </Compile>
+    <Compile Include="ActionResults\RedirectToReferrerTests.cs" />
+    <Compile Include="Binders\CurrentBasketBinderTester.cs" />
+    <Compile Include="Binders\MailingListSubscriptionBinderTester.cs" />
+    <Compile Include="Controllers\CategoryControllerTests.cs" />
+    <Compile Include="Controllers\CheckoutControllerTester.cs" />
+    <Compile Include="Controllers\CmsControllerTests.cs" />
+    <Compile Include="Controllers\CommentAnswerControllerTests.cs" />
+    <Compile Include="Controllers\CommentControllerTests.cs" />
+    <Compile Include="Controllers\CountryControllerTests.cs" />
+    <Compile Include="Controllers\HeaderControllerTests.cs" />
+    <Compile Include="Controllers\HomeControllerTests.cs" />
+    <Compile Include="Controllers\InvoiceControllerTests.cs" />
+    <Compile Include="Controllers\LoginControllerTests.cs" />
+    <Compile Include="Controllers\BasketControllerTests.cs" />
+    <Compile Include="Controllers\MailingListControllerTests.cs" />
+    <Compile Include="Controllers\MenuControllerTester.cs" />
+    <Compile Include="Controllers\OrderAdjustmentControllerTests.cs" />
+    <Compile Include="Controllers\OrderControllerTests.cs" />
+    <Compile Include="Controllers\OrderStatusControllerTests.cs" />
+    <Compile Include="Controllers\PostageControllerTests.cs" />
+    <Compile Include="Controllers\PostageDetailControllerTests.cs" />
+    <Compile Include="Controllers\ProductControllerTests.cs" />
+    <Compile Include="Controllers\ProductCopyControllerTests.cs" />
+    <Compile Include="Controllers\ReportControllerTests.cs" />
+    <Compile Include="Controllers\ReviewsControllerTests.cs" />
+    <Compile Include="Controllers\RichEditorControllerTester.cs" />
+    <Compile Include="Controllers\SiteMapControllerTests.cs" />
+    <Compile Include="Controllers\StockControllerTests.cs" />
+    <Compile Include="Controllers\UserControllerTests.cs" />
+    <Compile Include="Database\DatabaseManagerTester.cs" />
+    <Compile Include="Extensions\CategoryWriterTests.cs" />
+    <Compile Include="Extensions\EnumerableExtensionsTests.cs" />
+    <Compile Include="Extensions\ObjectExtensionsTests.cs" />
+    <Compile Include="Filters\AuthenticateFilterTester.cs" />
+    <Compile Include="Filters\CopyMessageFromTempDataToViewDataTester.cs" />
+    <Compile Include="Filters\EnsureSslFilterTester.cs" />
+    <Compile Include="Handlers\AddToMailingListOnOrderConfirmedTests.cs" />
+    <Compile Include="Handlers\ChangeInStockStatusOnStockItemInStockChangedTests.cs" />
+    <Compile Include="Handlers\CreateNewBasketOnOrderConfirmTests.cs" />
+    <Compile Include="Handlers\EmailOrderConfirmationOnOrderConfirmedTests.cs" />
+    <Compile Include="Handlers\EmailOrderDispatchOnOrderDispatchTests.cs" />
+    <Compile Include="Handlers\PublicDispactchMessageOnOrderDispatchTests.cs" />
+    <Compile Include="Handlers\UpdateOrdersOnProductNameChangedTests.cs" />
+    <Compile Include="IoCTests.cs" />
+    <Compile Include="IoC\UrlBasedComponentSelectorTests.cs" />
+    <Compile Include="Maps\BasketMapTests.cs" />
+    <Compile Include="Maps\ContentMapTests.cs" />
+    <Compile Include="Maps\MapsTestsSetupAndTeardown.cs" />
+    <Compile Include="Maps\ProductMapTests.cs" />
+    <Compile Include="Maps\ReviewMapTests.cs" />
+    <Compile Include="Maps\SimpleMapTests.cs" />
+    <Compile Include="Maps\ModelTestData.cs" />
+    <Compile Include="Models\BasketTests.cs" />
+    <Compile Include="Models\Builders\Default.cs" />
+    <Compile Include="Models\Builders\TestDataFor.cs" />
+    <Compile Include="Models\CardTests.cs" />
+    <Compile Include="Models\CategoryTests.cs" />
+    <Compile Include="Models\ContactTests.cs" />
+    <Compile Include="Models\ContentTests.cs" />
+    <Compile Include="Models\CustomDataAnnotations\CreditCardAttributeTests.cs" />
+    <Compile Include="Models\Extensions\ActivatableExtensionsTests.cs" />
+    <Compile Include="Models\ImageTests.cs" />
+    <Compile Include="Models\OrderAdjustmentTests.cs" />
+    <Compile Include="Models\OrderLineTests.cs" />
+    <Compile Include="Models\OrderTests.cs" />
+    <Compile Include="Models\PostageTests.cs" />
+    <Compile Include="Models\ProductTests.cs" />
+    <Compile Include="Models\TextContentTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ContentRepositoryExtensionsTests.cs" />
+    <Compile Include="Repositories\MockRepositoryBuilder.cs" />
+    <Compile Include="Repositories\OrderableExtensionsTests.cs" />
+    <Compile Include="Repositories\ProductRepositoryExtensionsTests.cs" />
+    <Compile Include="Repositories\QueriableExtensionsTests.cs" />
+    <Compile Include="Repositories\RepositoryTestsSetupAndTeardown.cs" />
+    <Compile Include="Repositories\UrlNamedExtensionsTests.cs" />
+    <Compile Include="Repositories\UserRepositoryExtensionsTests.cs" />
+    <Compile Include="Routes\RouteTests.cs" />
+    <Compile Include="Services\BasketServiceTests.cs" />
+    <Compile Include="Services\CheckoutServiceTester.cs" />
+    <Compile Include="Services\EmailServiceTemplateTests.cs" />
+    <Compile Include="Services\EmailServiceTester.cs" />
+    <Compile Include="Services\EncryptionServiceTests.cs" />
+    <Compile Include="Services\ImageFileServiceTests.cs" />
+    <Compile Include="Services\ImageServiceTests.cs" />
+    <Compile Include="Services\MoveTests.cs" />
+    <Compile Include="Services\OrderableServiceTests.cs" />
+    <Compile Include="Services\OrderSearchServiceTests.cs" />
+    <Compile Include="Services\PostageServiceTests.cs" />
+    <Compile Include="Services\ProductBuilderContributors\BasicPropertiesTests.cs" />
+    <Compile Include="Services\ProductBuilderContributors\CategoriesTests.cs" />
+    <Compile Include="Services\ProductBuilderContributors\CreateProductTests.cs" />
+    <Compile Include="Services\ProductBuilderContributors\ImagesTests.cs" />
+    <Compile Include="Services\ProductBuilderContributors\PositionTests.cs" />
+    <Compile Include="Services\ProductBuilderContributors\ProductBuilderContributorTestBase.cs" />
+    <Compile Include="Services\ProductBuilderContributors\RetrieveProductTests.cs" />
+    <Compile Include="Services\ProductBuilderContributors\SizesTests.cs" />
+    <Compile Include="Services\ProductBuilderContributors\UniqueNameCheckTests.cs" />
+    <Compile Include="Services\ProductBuilderTests.cs" />
+    <Compile Include="Services\ProductCopyServiceTests.cs" />
+    <Compile Include="Services\SizeServiceTests.cs" />
+    <Compile Include="Services\UserServiceTests.cs" />
+    <Compile Include="Spikes\UriSpike.cs" />
+    <Compile Include="Spikes\UserTypeSpike.cs" />
+    <Compile Include="TestExtensions.cs" />
+    <Compile Include="TestHelpers\ControllerTestContext.cs" />
+    <Compile Include="TestHelpers\DummyRepository.cs" />
+    <Compile Include="TestHelpers\FakeValueProvider.cs" />
+    <Compile Include="TestHelpers\HttpContextTestContext.cs" />
+    <Compile Include="TestHelpers\MockViewEngine.cs" />
+    <Compile Include="TestHelpers\TestController.cs" />
+    <Compile Include="ViewData\CategoryViewDataExtensionsTests.cs" />
+    <Compile Include="XmlRpc\MetaWeblogTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Suteki.Common\Suteki.Common.csproj">
+      <Project>{5A734DD0-928C-4A1E-8D12-7DDD607D89C6}</Project>
+      <Name>Suteki.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Suteki.Shop.Exports\Suteki.Shop.Exports.csproj">
+      <Project>{DD09CBA4-52C5-442F-A641-800B287CED6C}</Project>
+      <Name>Suteki.Shop.Exports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Suteki.Shop\Suteki.Shop.csproj">
+      <Project>{F63A91D4-3A6C-4729-BE83-D6CB45A53EF3}</Project>
+      <Name>Suteki.Shop</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\ExpectedDispatchNotification.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\ExpectedOrderConfirmation.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestImages\46af1390-4cff-4741-a1d1-3c87b425bac9.JPG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Suteki.Shop\Configuration\Windsor.config">
+      <Link>Windsor.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Suteki.Shop\Views\EmailTemplates\OrderConfirmation.vm">
+      <Link>Templates\OrderConfirmation.vm</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Suteki.Shop\Views\EmailTemplates\OrderDispatch.vm">
+      <Link>Templates\OrderDispatch.vm</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Suteki.Shop\Views\EmailTemplates\_orderDetails.vm">
+      <Link>Templates\_orderDetails.vm</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Suteki.Shop\Web.config">
+      <Link>Web.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\ModelHelpers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(SolutionDir)Suteki.Shop\Web.config" "$(TargetPath).config"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

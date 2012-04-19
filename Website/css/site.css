@@ -1,0 +1,17 @@
+﻿body
+{
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+
+#header
+{
+	background-color:#EF4832;
+	background-image:url('../images/header_gradient.png');
+	background-repeat:repeat-x;
+}
+
+#header_sidebar
+{
+	color:white;
+	font-weight:bold;
+}

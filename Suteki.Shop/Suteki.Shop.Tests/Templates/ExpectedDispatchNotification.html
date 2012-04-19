@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Order Confirmation</title>
+    <link href="http://static.jumpthegun.co.uk.s3.amazonaws.com/Site.css" rel="stylesheet" type="text/css" />
+    <link href="http://static.jumpthegun.co.uk.s3.amazonaws.com/Print.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="print">
+		<h1>Order Dispatched</h1>		
+		<p>
+			Many thanks  for your order which has now been despatched. Best regards, Suteki Shop.
+		</p>
+		<h3>Order Details</h3>
+<dl>
+	<dt>Order Number</dt><dd>98765 &nbsp;</dd>
+	<dt>Date</dt><dd>05/08/2010</dd>
+</dl>
+<table>
+	<tr>
+		<th class="wide">Product</th>
+		<th class="thin number">Quantity</th>
+		<th class="thin number">Unit Price</th>
+		<th class="thin number">Total Price</th>
+	</tr>
+    	<tr>
+		<td>grey shirt - medium</td>
+		<td class="number">3</td>
+		<td class="number">£4.80</td>
+		<td class="number">£14.40</td>
+	</tr>
+  	<tr>
+		<td>blue trousers - small</td>
+		<td class="number">2</td>
+		<td class="number">£12.33</td>
+		<td class="number">£24.66</td>
+	</tr>
+  
+    <tr>
+    <td colspan="3">Reduction 'cos we're nice</td>
+    <td class="number">-£3.40</td>
+  </tr>
+  
+  <tr class="total">
+		<td>Total</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="number">£35.66</td>
+	</tr>
+
+	<tr>
+		<td>Postage</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="number">£4.55</td>
+	</tr>
+
+	<tr>
+		<td colspan="4">(for United Kingdom)</td>
+	</tr>
+
+	<tr class="total">
+		<td>Total With Postage</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td class="number">£40.21</td>
+	</tr>
+</table>
+
+<hr />		
+<!-- Customer Details -->
+
+<h3>Customer Details</h3>
+<div class="columnContainer">
+	<div class="contentLeftColumn">
+		<h3>Card Holder</h3>
+        
+		<dl>
+			<dt>First Name</dt><dd>Joe &nbsp;</dd>
+			<dt>Last Name</dt><dd>Blogs &nbsp;</dd>
+			<dt>Address 1</dt><dd>4 The Street &nbsp;</dd>
+			<dt>Address 2</dt><dd>Marlinspike &nbsp;</dd>
+			<dt>Address 3</dt><dd>Near Arington &nbsp;</dd>
+			<dt>Town</dt><dd>Brighton &nbsp;</dd>
+			<dt>County</dt><dd>East Sussex &nbsp;</dd>
+			<dt>Postcode</dt><dd>BN3 5SR &nbsp;</dd>
+			<dt>Country</dt><dd>UK &nbsp;</dd>
+			<dt>Telephone</dt><dd>01273 345678 &nbsp;</dd>
+			<dt>Email</dt><dd>joe@blogs.com &nbsp;</dd>
+		</dl>
+        
+	</div>
+	<div class="contentRightColumn">
+		<!-- deliver contact -->
+        
+		<h3>Delivery Address</h3>
+        
+				<dl>
+			<dt>First Name</dt><dd>Joe &nbsp;</dd>
+			<dt>Last Name</dt><dd>Blogs &nbsp;</dd>
+			<dt>Address 1</dt><dd>4 The Street &nbsp;</dd>
+			<dt>Address 2</dt><dd>Marlinspike &nbsp;</dd>
+			<dt>Address 3</dt><dd>Near Arington &nbsp;</dd>
+			<dt>Town</dt><dd>Brighton &nbsp;</dd>
+			<dt>County</dt><dd>East Sussex &nbsp;</dd>
+			<dt>Postcode</dt><dd>BN3 5SR &nbsp;</dd>
+			<dt>Country</dt><dd>UK &nbsp;</dd>
+			<dt>Telephone</dt><dd>01273 345678 &nbsp;</dd>
+		</dl>
+				<dl>
+			<dt>Additional Information</dt><dd>some info &nbsp;</dd>
+		</dl>
+	</div>      
+</div>
+
+<div class="clear"></div>         
+<hr />
+
+<!-- Payment Details -->
+
+<h3>Payment Details</h3>
+<div class="columnContainer">
+	<div class="contentLeftColumn">
+				<dl>
+			<dt>Card Type</dt><dd>Visa &nbsp;</dd>
+			<dt>Card Holder</dt><dd>Joe Blogs &nbsp;</dd>
+		</dl>
+        	</div>
+	<div class="contentRightColumn">
+
+	</div>
+</div>    </div>
+</body>
+</html>

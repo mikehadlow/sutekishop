@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>Product_Add_Victory</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Product_Add_Victory</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/shop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Suteki Shop - Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Ships of the line</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Suteki Shop - Ships of the line</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=New Product</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Name</td>
+	<td>Victory</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Weight</td>
+	<td>450</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Price</td>
+	<td>300.00</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>IsActive</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>Description_ifr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>tinymce</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>tinymce</td>
+	<td>HMS Victory was Nelson's flagship at the battle of Trafalguar</td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=parent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Sizes_0_</td>
+	<td>10cm</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Sizes_1_</td>
+	<td>20cm</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Sizes_2_</td>
+	<td>30cm</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Save Changes']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>Name</td>
+	<td>Victory</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Preview</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='mainContent']/div/div[2]/h1</td>
+	<td>Victory&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;£300.00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>basketItem_size_Id</td>
+	<td>10cm 20cm 30cm</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>basketItem_Quantity</td>
+	<td>1 2 3 4 5 6 7 8 9 10</td>
+</tr>
+</tbody></table>
+</body>
+</html>

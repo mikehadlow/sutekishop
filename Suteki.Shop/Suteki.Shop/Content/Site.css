@@ -1,0 +1,849 @@
+﻿/*
+colors
+
+Main:		#514E5C
+Highlight:	#CBC9CE (most text)
+Menu:		#A5A0B0
+Menuborder:	#C0C0C0
+MenuLight:	#B5B0C0
+
+*/
+
+body
+{
+	font-family:Arial, Helvetica, sans-serif;
+	min-width: 900px;
+	text-align: center;
+	font-size:9pt;
+	background-image: url(Images/wallpaper.jpg);
+	margin: 0 0 0 0;
+}
+
+a img {border: none; }
+
+a
+{
+	color: #CBC9CE;
+}
+a:hover
+{
+	color: #FFF;	
+}
+
+.rightText
+{
+	float: right;
+	margin: 0 0 0 0;
+}
+
+.rightText p
+{
+	margin: 0;
+	padding: 0;
+}
+
+.page
+{
+	margin:0 auto;
+	width:900px;
+	text-align: left;
+	padding: 0;
+	background-color:#514E5C;
+	color: #CBC9CE;
+	border: solid 10px #514E5C;
+}
+
+.header
+{
+	width: 900px;
+	margin: 0;
+	padding: 0;
+	/* background-image:url('Logo.png'); */
+}
+
+.logo
+{
+	margin: 0 0 0 0px;
+	padding: 0px;	
+	height: 80px;
+	background-image: url(Images/Logo_background.png);
+	/* background-repeat: no-repeat; */
+}
+
+.logo h1
+{
+	margin: 0;
+	padding: 25px 0 0 20px;
+	/* visibility: hidden; */
+}
+
+h1
+{
+	font-weight: lighter;
+	font-size: 18pt;
+}
+h2
+{
+	font-weight: lighter;
+	font-size: 14pt;
+}
+h2 a
+{
+	text-decoration: none;
+}
+
+.leftColumn
+{
+	background-color: #A5A0B0;
+	width: 180px;
+	height: 100%;
+	float: left;
+	padding: 0;
+	border-right-style:solid;
+	border-right-color:#C0C0C0;
+	border-right-width:1px;
+	border-left-style:solid;
+	border-left-color:#C0C0C0;
+	border-left-width:1px;
+}
+
+.contentsContainer
+{
+	height: 100%;
+	width: 100%;	
+}
+
+.rightColumn
+{
+	width: 630px;
+	margin-left: 220px;
+	padding: 10px 10px 10px 10px;
+}
+
+.rightColumn img
+{
+	padding: 0 10px 0 0;
+}
+
+.footer
+{
+	border-style: dotted;
+	border-width: 1px;
+	padding: 0px 10px;
+}
+
+.login
+{
+	/* visibility: hidden; */
+}
+
+.error
+{
+	color: Red;
+	font-weight: bold;	
+}
+
+.message
+{
+	color: Green;
+	font-weight: bold;
+}
+
+.clear
+{
+	clear: both;	
+}
+
+.clearRight
+{
+	clear: right;
+}
+
+.siteMap
+{
+}
+
+.topContent
+{
+	padding: 10px 20px;
+}
+
+.topContent p
+{
+}
+	
+.topContent img
+{
+	margin: 0 30px 30px 30px;
+}
+
+.inline_image
+{
+    float: left;
+}
+
+/* --------------------------- columns ------------------------ */
+
+.columnContainer
+{
+	margin: 0 0 20px 0;
+	padding: 20px 0 0 0;
+	overflow: visible;
+	/*border-top: solid 2px #CBC9CE;*/ /* better to use an HR instead */
+}
+
+.columnContainer label
+{
+	display: block;
+	float: left;
+	margin: 5px 0 0 0;
+	padding: 0 0;
+	width: 135px;
+}
+
+.columnContainer input[type=text]
+{
+	display: block;
+	margin: 5px 0 0 140px;
+	width: 150px;
+}
+
+.columnContainer .small input[type=text]
+{
+	width: 70px;
+}
+
+.columnContainer input[type=checkbox]
+{
+	display: block;
+	margin: 5px 0 0 140px;
+	width: 15px;
+}
+
+.columnContainer select
+{
+	display: block;
+	margin: 5px 0 0 140px;
+	width: 154px;
+}
+
+.columnContainer textarea
+{
+	display: block;
+	margin: 5px 0 0 140px;
+	width: 150px;
+	height: 50px;
+}
+
+.contentLeftColumn
+{
+	width: 300px;
+	float: left;
+}
+
+.contentRightColumn
+{
+	width: 300px;
+	margin: 0 0 0 320px;
+}
+
+.cardDate
+{
+	overflow: auto;
+}
+
+.cardDate select
+{
+	width: 70px;
+	display: block;
+}
+
+dt
+{
+	display: block;
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0;
+	width: 100px;
+	font-weight: bold;	
+}
+
+dd
+{
+	display: block;
+	margin: 0 0 0 100px;
+	padding: 0;
+	width: 190px;
+}
+
+/* --------------------------- table forms ------------------------ */
+
+.columnContainer .field input[type=text]
+{
+	margin: 0 0 0 0;
+}
+
+.columnContainer .field input[type=checkbox]
+{
+	margin: 0 0 0 0;
+}
+
+.columnContainer .field select
+{
+	margin: 0 0 0 0;
+}
+
+.columnContainer .field textarea
+{
+	margin: 0 0 0 0;
+}
+
+
+/* --------------------------- main menu ------------------------ */
+
+.mainMenu
+{
+	background-color: #A5A0B0;
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.mainMenu li
+{
+	float: left;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #C0C0C0;
+}
+
+li.editMenuLink a
+{
+	color: Red;	
+}
+
+.mainMenu a
+{
+	background: #A5A0B0 url(Images/menu_item.png) center left no-repeat;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 5px 12px 5px 30px;
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+	width: 100px;
+	border-right: 1px solid #C0C0C0;
+}
+
+.mainMenu a:hover 
+{
+	background: #B5B0C0 url(Images/menu_item_hover.png) center left no-repeat;
+}
+
+/* -------------------------- category ---------------------------*/
+
+.category 
+{
+	margin: 0;
+	padding: 0;
+}
+
+.category ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.category ul ul
+{
+	position: absolute;
+	top: 0;
+	left: 100%; /* to position them to the right of their containing block */
+	width: 100%; /* width is based on the containing block */
+}
+
+.category li 
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.category a 
+{
+	background: #A5A0B0 url(Images/menu_item.png) left center no-repeat;
+	border-bottom: 1px solid #C0C0C0;
+	color: #ccc;
+	display: block;
+	margin: 0;
+	padding: 5px 0px 5px 30px;
+	text-decoration: none;
+	color: #FFF;
+	font-weight: bold;
+	width: 150px;
+}
+
+.category a:hover 
+{
+	background: #B5B0C0 url(Images/menu_item_hover.png) left center no-repeat;
+}	
+
+/* first level */
+
+div.category ul ul,
+div.category ul li:hover ul ul
+{
+    display: none;
+	z-index: 1001;
+	border-left: 1px solid #C0C0C0;
+}
+
+div.category ul li:hover ul
+{display: block;}
+
+/* second level */
+
+div.category ul ul ul
+{
+    display: none;
+	z-index: 1001;
+	border-left: 1px solid #C0C0C0;
+}
+
+div.category ul ul li:hover ul
+{display: block;}
+
+/* basket */
+
+li.basket
+{
+}
+.basket a
+{
+	height: 130px;
+	background: #A5A0B0 url(Images/basket.png) no-repeat;
+}
+.basket a:hover
+{
+	background: #A5A0B0 url(Images/basket_hover.png) no-repeat;
+}
+
+.categoryBox
+{
+	float:left;
+	margin: 0 20px 20px 0;	
+}
+
+.categoryImage
+{
+    margin: 0 0 20px 0;
+}
+
+/* -------------------------- product ---------------------------*/
+
+.product
+{
+	display: block;
+	float: left;
+	width: 120px;
+	height: 135px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: Black;
+	background-color: #B5B0C0;
+	color: Black;
+	font-weight: bold;
+	text-align: center;
+	margin: 0px 10px 10px 0px;	
+	padding: 5px 5px 5px 5px;
+}
+
+.product:hover
+{
+	cursor: pointer;
+}
+
+.product a
+{
+	color: black;
+	text-decoration: none;
+}
+
+.product img
+{
+	margin: 5px 0 0 0;
+	padding: 0 0 0 0;
+	float: none;
+}
+
+.productImage
+{
+	text-align: center;
+	margin: 0;
+	padding: 0;	
+}
+
+.productDescription
+{
+	overflow: visible;
+}
+
+.mainImage
+{
+	float: left;
+	margin: 0px 20px 10px 0px;	
+}
+
+.imageList
+{
+	margin: 5px 0px 5px 0px;	
+}
+.imageList img:hover
+{
+	cursor: pointer;
+}
+.imageEdit
+{
+	float:left;
+	margin: 5px 5px;
+}
+
+.productOptions
+{
+	border: solid 1px #B5B0C0;
+	padding: 5px 5px;
+	text-align: right;
+	margin: 20px 0 0 0;
+}
+.productOptions label
+{
+	display: inline;
+	margin: 0px 5px;
+	vertical-align: middle;
+}
+.productOptions select
+{
+	display: inline;
+	margin: 0px 5px;
+}
+.productOptions input[type=submit]
+{
+	display: inline;
+	margin: 0px 5px;
+}
+.productOptions input[type=text]
+{
+	display: inline;
+	margin: 0px 5px;
+}
+
+div.sizeInput
+{
+	overflow: visible;
+}
+
+div.sizeInput input[type=text]
+{
+	display: inline;
+	width: 100px;
+	margin: 0 5px 5px 0;	
+}
+
+/* ------------------------- order ------------------------------ */
+
+.orderAction
+{
+	margin: 10px 0;
+}
+
+tr.Created
+{
+	color: #CBC9CE;	
+}
+tr.Dispatched
+{
+	color: #00FF00;
+}
+tr.Rejected
+{
+	color: #FF0000;
+}
+
+/* ------------------------- form ------------------------------ */
+
+label
+{
+	display: block;
+	font-weight: bold;
+	margin: 10px 10px 0px 0px;
+}
+
+label.inline
+{
+    display: inline;
+}
+
+input
+{
+	display:block;
+	margin: 10px 0px 0px 0px;
+	width: 300px;
+	overflow: visible;
+}
+
+input.inline
+{
+	display:inline;
+	width: 50px;	
+}
+
+input.inline-date
+{
+    display:inline;
+    width: 75px;
+}
+
+input.table
+{
+	display:inline;
+	width: 50px;	
+	margin: 0 0 0 0;
+}
+
+input.wide
+{
+    width: 300px;
+    margin: 10px 20px 0px 0px;
+}
+
+input[type=submit], button
+{
+	display: block;
+	width: 150px;
+	margin: 10px 10px 10px 0px;
+	border: outset 2px #A5A0B0;
+	color: #514E5C;
+	background: #CBC9CE;
+}
+
+input[type=checkbox]
+{
+	display: inline;
+	width: auto;
+}
+
+input[type=radio]
+{
+	display: inline;
+	width: auto;
+}
+
+input[type=button]
+{
+	display: inline;
+	width: 75px;
+}
+
+.linkButton
+{
+	text-decoration: none;
+	display: inline;
+	padding: 2px 5px 2px 5px;
+	margin: 0 0 0 0;
+	width: auto;
+	color: #514E5C;
+	background: #CBC9CE;
+	border: outset 2px #A5A0B0;
+}
+.lineButton:hover
+{
+	color: #514E5C;
+}
+
+select
+{
+	margin: 10px 0px 0px 0px;
+}
+
+.small select
+{
+	width: 70px;
+}
+
+textarea
+{
+	margin: 10px 10px 0px 0px;
+	width: 450px;
+	overflow: visible;
+	font-family: arial;
+	font-size: 10pt;
+}
+
+.sizeInput
+{
+	
+}
+
+input[type=submit].postAction
+{
+    display: inline;
+    margin: 0 0 0 0;
+    width: auto;
+    padding: 2px 5px;
+}
+input[type=submit].postAction:hover
+{
+    color: White;
+}
+form.postAction
+{
+    display: inline;
+    margin: 0 0 0 0;
+}
+
+
+/*----------------------------------- cross and tick -------------------------------------*/
+
+.cross
+{
+	display: inline;
+	background-image: url(Images/cross.png);
+	background-repeat: no-repeat;
+	width: 10pt;
+	margin: 5px 0px 0px 10px;
+}
+
+.tick
+{
+	display: inline;
+	background-image: url(Images/tick.png);
+	background-repeat: no-repeat;
+	width: 10pt;
+	margin: 5px 0px 0px 10px;
+}
+
+
+/*-------------------------------------- table -------------------------------------------*/
+
+table
+{
+}
+
+tr.total
+{
+	font-weight: bold;
+}
+
+tr.line-above
+{
+    border-top: 1px solid #C0C0C0;
+}
+
+th
+{
+	margin: 0px 20px 0px 0px;
+}
+
+th.wide
+{
+	width: 200px;
+}
+
+th.thin
+{
+	width: 80px;
+}
+
+th.number
+{
+	text-align: right;
+}
+
+td
+{
+	margin: 0px 20px 0px 0px;
+	vertical-align: top;
+}
+
+td.number
+{
+	text-align: right;
+}
+
+/*-------------------------------------- pager -------------------------------------------*/
+
+.pager
+{
+	width: 100%;
+	margin: 10px 0;
+}
+
+/*-------------------------------------- stock -------------------------------------------*/
+
+.stockItem
+{
+	display: block;
+	clear: left;
+}
+
+.stockItem input[type=checkbox]
+{
+	display: inline;
+	margin: 0;
+}
+
+.stockCheckbox
+{
+	display: block;
+	float: left;
+	width: 40px; /* width here controls the spacing of the checkboxes */
+}
+
+.stockProduct
+{
+	display: block;
+	float: left;
+	width: 150px;
+}
+
+/*----------------------------------- ModelState -------------------------------------*/
+
+/* flash */
+ul.validation-summary-errors
+{
+	border: 2px solid #ff0000;
+	margin: 5px 0 7px 0;
+	padding: 5px;
+	background-color: #f9d5d6;
+	font-weight: bold;
+	color: Black;
+}
+.input-validation-error 
+{
+	border: 2px solid #ff0000;
+	background-color: #f9d5d6;
+}
+.field-validation-error 
+{
+	color: red;
+	font-weight: bold;
+}
+ul.validation-summary-errors 
+{
+	list-style-type: none;
+}
+ul.validation-summary-errors li 
+{
+	padding: 0;
+	margin: 0;
+}
+
+.pointer:hover {
+	cursor: pointer;
+}
+

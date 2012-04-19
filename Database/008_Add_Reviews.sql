@@ -1,0 +1,14 @@
+use SutekiShop
+CREATE TABLE dbo.Review (
+	Id int NOT NULL IDENTITY (1, 1),
+	ProductId int NOT NULL,
+	Approved bit NOT NULL,
+	[Text] nvarchar(MAX) NULL,
+	Reviewer nvarchar(250),
+	Rating int
+)  ON [PRIMARY]
+TEXTIMAGE_ON [PRIMARY]
+
+ALTER TABLE dbo.Review ADD CONSTRAINT PK_Review PRIMARY KEY CLUSTERED (
+	Id
+) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>Checkout_complete</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Checkout_complete</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/shop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Suteki Shop - Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Basket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Suteki Shop - Basket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//form[@id='basketForm']/table/tbody/tr[6]/td[5]</td>
+	<td>£460.00</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Checkout']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Suteki Shop - Checkout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='mainContent']/div[1]/div[2]/table/tbody/tr[6]/td[5]</td>
+	<td>£460.00</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>CardContactFirstName</td>
+	<td>Mike</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>CardContactLastName</td>
+	<td>Hadlow</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>CardContactAddress1</td>
+	<td>5 Lovely Street</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>CardContactTown</td>
+	<td>Hove</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>CardContactCounty</td>
+	<td>East Sussex</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>CardContactPostcode</td>
+	<td>BN3 6BB</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>CardContactTelephone</td>
+	<td>01273123456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Email</td>
+	<td>mike@mike.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>EmailConfirm</td>
+	<td>mike@mike.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>AdditionalInformation</td>
+	<td>Can I have the Captain Aubery figure as well for free?</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>CardHolder</td>
+	<td>Mr Mike Hadlow</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>CardNumber</td>
+	<td>1111111111111117</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>CardExpiryMonth</td>
+	<td>label=06</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>CardExpiryYear</td>
+	<td>label=2011</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>CardStartMonth</td>
+	<td>label=01</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>CardStartYear</td>
+	<td>label=2007</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>CardSecurityCode</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>ContactMe</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submitButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Suteki Shop - Checkout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>£460.00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Can I have the Captain Aubery figure as well for free?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Place Order']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Suteki Shop - Order</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Order Confirmation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>£460.00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Hadlow</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>5 Lovely Street</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Hove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>East Sussex</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>BN3 6BB</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>United Kingdom</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>01273123456</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=mike@mike.com</td>
+	<td>mike@mike.com</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Can I have the Captain Aubery figure as well for free?</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
