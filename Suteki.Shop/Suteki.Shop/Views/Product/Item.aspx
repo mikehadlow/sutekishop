@@ -15,17 +15,7 @@
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
-<div id="product">
-<script type="text/javascript">
-
-function onThumbnailClick(img)
-{
-    var mainImage = document.getElementById("mainImage");
-    var imgUrl = img.src.replace("thumb", "main");
-    mainImage.src = imgUrl;
-}
-
-</script>
+<div id="product">
 
 <div class="error"><%= TempData["message"] %></div>
 

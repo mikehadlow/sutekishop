@@ -1,0 +1,1 @@
+alter table [Image] add HasOriginal bit not null default 0

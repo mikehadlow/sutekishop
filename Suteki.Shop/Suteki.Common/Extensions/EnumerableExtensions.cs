@@ -37,11 +37,6 @@ namespace Suteki.Common.Extensions
             }
         }
 
-        public static string Concat(this IEnumerable<string> items)
-        {
-            return items.Aggregate("", (agg, item) => agg + item);
-        }
-
         /// <summary>
         /// Convenient replacement for a range 'for' loop. e.g. return an array of int from 10 to 20:
         /// int[] tenToTwenty = 10.to(20).ToArray();

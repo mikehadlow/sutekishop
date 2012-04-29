@@ -10,3 +10,5 @@
 [Tt]humbs.db 
 _ReSharper.*
 *.svn
+*App_Data
+Suteki.Shop/Suteki.Shop/ProductPhotos/*
