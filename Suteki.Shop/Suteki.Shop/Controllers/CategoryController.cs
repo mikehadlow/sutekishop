@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using System.Text.RegularExpressions;
 using System.Web.Mvc;
 using Suteki.Common.Binders;
 using Suteki.Common.Filters;
@@ -73,21 +72,6 @@ namespace Suteki.Shop.Controllers
 
 			return this.RedirectToAction(c => c.Index());
 		}
-
-        private string GetSafeUrlName(string name)
-        {
-            var replaced = Regex.Replace(name, @"[\W]+", "_");
-            return replaced;
-        }
-
-        private string GetUrlSafeCategoryName(string name)
-        {
-            var safeName = GetSafeUrlName(name);
-            var checkExistance = categoryRepository.GetAll().Where(x => x.UrlName == safeName);
-            if (checkExistance.Count() > 0)
-                return safeName += checkExistance.Count() + 1;
-            return safeName;
-        }
 
         [AdministratorsOnly, HttpGet, UnitOfWork]
         public ActionResult Edit(int id)

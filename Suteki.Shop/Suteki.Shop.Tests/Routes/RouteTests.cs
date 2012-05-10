@@ -43,6 +43,12 @@ namespace Suteki.Shop.Tests.Routes
         }
 
         [Test]
+        public void ProductRouteToProductItem()
+        {
+            AssertRoutes(Routes, "~/product/prodName", new { Controller = "Product", Action = "Item", UrlName = "prodName" });
+        }
+
+        [Test]
         public void AnyControllerActionPairShouldRouteToCorrectControllerAction()
         {
             AssertRoutes(Routes, "~/shop/MyController/MyAction", new { Controller = "MyController", Action = "MyAction" });

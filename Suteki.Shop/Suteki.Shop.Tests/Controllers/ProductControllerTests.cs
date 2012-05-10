@@ -26,6 +26,7 @@ namespace Suteki.Shop.Tests.Controllers
     	private IUserService userService;
         private IProductBuilder productBuilder;
         private const string urlName = "Product_4";
+        private const string categoryUrlName = "oneTwo";
 
         [SetUp]
         public void SetUp()
@@ -97,9 +98,7 @@ namespace Suteki.Shop.Tests.Controllers
         [Test]
         public void Category_ShouldShowIndexView()
         {
-            const string urlName = "slug";
-
-            productController.Category(urlName)
+            productController.Category(categoryUrlName)
                 .ReturnsViewResult()
                 .ForView("Index");
         }
