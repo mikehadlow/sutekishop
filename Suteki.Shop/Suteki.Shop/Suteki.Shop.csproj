@@ -853,7 +853,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>5401</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/SutekiShop</IISUrl>
+          <IISUrl>http://localhost/SutekiShopFork</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

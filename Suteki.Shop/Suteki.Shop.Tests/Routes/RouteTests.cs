@@ -27,13 +27,19 @@ namespace Suteki.Shop.Tests.Routes
         [Test]
         public void DomainOnlyShouldRouteToHomeIndex()
         {
-            AssertRoutes(Routes, "~/shop", new { Controller = "Home", Action = "Index", Id = "" });
+            AssertRoutes(Routes, "~/shop", new { Controller = "Home", Action = "Index" });
         }
 
         [Test]
         public void ControllerOnlyShouldDefaultToIndex()
         {
             AssertRoutes(Routes, "~/shop/MyController", new { Controller = "MyController", Action = "Index" });
+        }
+
+        [Test]
+        public void CategoryRouteToProductCategory()
+        {
+            AssertRoutes(Routes, "~/category/catName", new { Controller = "Product", Action = "Category", UrlName = "catName" });
         }
 
         [Test]
@@ -85,7 +91,7 @@ namespace Suteki.Shop.Tests.Routes
 
             foreach (var property in propertyBag.GetProperties())
             {
-                Assert.AreEqual(property.Value, routeData.Values[property.Name]);
+                Assert.AreEqual(property.Value.ToString(), routeData.Values[property.Name].ToString());
             }
         }
     }

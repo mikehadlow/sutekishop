@@ -71,7 +71,7 @@ namespace Suteki.Shop.Tests.Repositories
             root.Categories.Add(two);
 
             var oneOne = new Category { Id = 4, Parent = one, Name = "oneOne" };
-            var oneTwo = new Category { Id = 5, Parent = one, Name = "oneTwo" };
+            var oneTwo = new Category { Id = 5, Parent = one, Name = "oneTwo", UrlName = "slug" };
             one.Categories.Add(oneOne);
             one.Categories.Add(oneTwo);
 

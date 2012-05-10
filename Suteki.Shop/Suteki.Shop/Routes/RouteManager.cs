@@ -20,6 +20,11 @@ namespace Suteki.Shop.Routes
                 "product/{urlname}",
                 new { controller = "Product", action = "Item", urlname = "" },
                 new { urlname = @"[^\.]*" });
+            
+            routes.MapRoute("Category",
+                "category/{urlName}",
+                new {controller = "Product", action = "Category", urlName = ""},
+                new { urlName = @"[^\.]*" });
 
             routes.MapRoute("reports",
                 "report/{action}.csv",
@@ -27,7 +32,7 @@ namespace Suteki.Shop.Routes
 
             routes.MapRoute("Shop",
                 "shop/{controller}/{action}/{id}",
-                new { controller = "Home", action = "Index", id = "" },
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 new { controller = @"[^\.]*" });
 
             routes.MapRoute("Root",
@@ -41,6 +46,9 @@ namespace Suteki.Shop.Routes
             routes.MapRoute("Rsd",
                 "rsd.xml",
                 new { controller = "Rsd", action = "Index" });
+            routes.MapRoute("Default",
+                            "{controller}/{action}/{id}",
+                            new {Controller = "Home", action = "index", id = UrlParameter.Optional});
         }
     }
 }
