@@ -43,7 +43,7 @@ namespace Suteki.Shop.Services
                     // convert the image to main and thumb sizes
                     imageService.CreateSizedImages(image, imageDefinitionKeys);
 
-                    File.Delete(imageFileService.GetFullPath(image.FileNameAsString));
+                    // File.Delete(imageFileService.GetFullPath(image.FileNameAsString));
 
                     images.Add(image);
                 }

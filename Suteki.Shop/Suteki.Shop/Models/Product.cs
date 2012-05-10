@@ -93,6 +93,11 @@ namespace Suteki.Shop
             }
         }
 
+        public virtual bool HasOriginalImages
+        {
+            get { return ProductImages.All(x => x.Image.HasOriginal); }
+        }
+
         public virtual Image MainImage
         {
             get

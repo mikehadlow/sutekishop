@@ -135,6 +135,7 @@
     <Compile Include="Binders\EntityModelBinderBindingSubclassTests.cs" />
     <Compile Include="Binders\EntityModelBinderTests.cs" />
     <Compile Include="Events\DomainEventsTests.cs" />
+    <Compile Include="Extensions\EnumerableExtensionsTests.cs" />
     <Compile Include="Extensions\TypeExtensionTests.cs" />
     <Compile Include="Extensions\UrlExtensionsHelperTests.cs" />
     <Compile Include="Filters\FilterUsingAttributeTester.cs" />

@@ -7,4 +7,8 @@
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<%= Url.Content("~/wlwmanifest.xml") %>" />
     <meta name="verify-v1" content="yT3b2nHIk4a8/T+tW3p8zQ30vgio2ELuZc/9qk//JBw=" />
     <link rel="shortcut icon" href="<%= Url.Content("~/favicon.ico") %>" type="image/x-icon" />
-    <script type="text/javascript" src="<%= Url.Content("~/Content/Script/jquery-1.2.6.min.js") %>"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="<%= Url.Content("~/Content/" + "fancybox/source/jquery.fancybox.css?v=2.0.6") %>" type="text/css" media="screen" />
+    <script type="text/javascript" src="<%= Url.Content("~/Content/" + "fancybox/source/jquery.fancybox.pack.js?v=2.0.6") %>"></script>

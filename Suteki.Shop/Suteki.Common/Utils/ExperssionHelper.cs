@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using Suteki.Common.Extensions;
 
 namespace Suteki.Common.Utils
 {
@@ -13,10 +12,8 @@ namespace Suteki.Common.Utils
 
         public static string GetDottedPropertyNameFromExpression<TModel, TProperty>(Expression<Func<TModel, TProperty>> propertyExpression)
         {
-            return GetProperties(propertyExpression)
-                .Select(property => property.Name)
-                .Intersperse(".")
-                .Concat();
+            return string.Join(".", GetProperties(propertyExpression)
+                .Select(property => property.Name));
         }
 
         public static IEnumerable<PropertyInfo> GetProperties<T, TProperty>(Expression<Func<T, TProperty>> propertyExpression)
