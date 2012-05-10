@@ -49,6 +49,7 @@ namespace Suteki.Shop.Controllers
 		{
 			return RenderIndexView(id);
 		}
+
         public ActionResult Category(string urlName)
         {
             return RenderIndexView(urlName);

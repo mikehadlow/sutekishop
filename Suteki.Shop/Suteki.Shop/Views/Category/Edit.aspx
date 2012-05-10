@@ -11,7 +11,6 @@
 		<%= this.Hidden(x => x.Category.Position) %>
 
 		<%= this.TextBox(x => x.Category.Name).Label("Name") %>
-        <%= this.TextBox(x=>x.Category.UrlName).Label("UrlName") %>
 		<%= this.Select(x => x.Category.Parent.Id).Options(Model.Categories, x => x.Id, x => x.Name).Label("Parent Category") %>
         <%= this.CheckBox(x => x.Category.IsActive).Label("Active") %>
         

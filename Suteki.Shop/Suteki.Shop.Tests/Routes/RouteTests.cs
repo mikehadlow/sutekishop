@@ -91,7 +91,7 @@ namespace Suteki.Shop.Tests.Routes
 
             foreach (var property in propertyBag.GetProperties())
             {
-                Assert.AreEqual(property.Value, routeData.Values[property.Name]);
+                Assert.AreEqual(property.Value.ToString(), routeData.Values[property.Name].ToString());
             }
         }
     }

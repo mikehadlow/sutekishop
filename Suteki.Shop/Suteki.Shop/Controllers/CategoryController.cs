@@ -58,9 +58,6 @@ namespace Suteki.Shop.Controllers
             Validator.Validate(ModelState, () =>
 			    image = httpFileService.GetUploadedImages(Request, ImageDefinition.CategoryImage).SingleOrDefault());
 
-            if (string.IsNullOrWhiteSpace(category.UrlName))
-                category.UrlName = GetUrlSafeCategoryName(category.Name);
-
             if (!ModelState.IsValid)
             {
                 return View("Edit", EditViewData.WithCategory(category));
