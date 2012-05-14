@@ -50,9 +50,31 @@ namespace Suteki.Shop.Controllers
 			return RenderIndexView(id);
 		}
 
+        public ActionResult Category(string urlName)
+        {
+            return RenderIndexView(urlName);
+        }
+
+        ActionResult RenderIndexView(string urlName)
+        {
+            var category = categoryRepository.GetAll().WithUrlName(urlName);
+
+			AppendTitle(category.Name);
+
+			var products = category.Products.InOrder();
+
+			if (!userService.CurrentUser.IsAdministrator)
+			{
+				products = products.Active();
+			}
+
+			return View("Index", ShopView.Data.WithProducts(products).WithCategory(category));
+		}
+
 		ActionResult RenderIndexView(int id)
 		{
 			var category = categoryRepository.GetById(id);
+            
 
 			AppendTitle(category.Name);
 

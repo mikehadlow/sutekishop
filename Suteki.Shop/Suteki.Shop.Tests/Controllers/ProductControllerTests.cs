@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System.Linq;
+using NUnit.Framework;
 using Rhino.Mocks;
 using Suteki.Common.Repositories;
 using Suteki.Common.Services;
@@ -10,6 +11,7 @@ using System.Threading;
 using System.Security.Principal;
 using Suteki.Shop.Services;
 using System.Web.Mvc;
+using System.Collections.Generic;
 
 // ReSharper disable InconsistentNaming
 namespace Suteki.Shop.Tests.Controllers
@@ -24,6 +26,7 @@ namespace Suteki.Shop.Tests.Controllers
     	private IUserService userService;
         private IProductBuilder productBuilder;
         private const string urlName = "Product_4";
+        private const string categoryUrlName = "oneTwo";
 
         [SetUp]
         public void SetUp()
@@ -90,6 +93,14 @@ namespace Suteki.Shop.Tests.Controllers
                 .WithModel<ShopViewData>()
                 .AssertNotNull(vd => vd.Product)
                 .AssertAreEqual(urlName, vd => vd.Product.UrlName);
+        }
+
+        [Test]
+        public void Category_ShouldShowIndexView()
+        {
+            productController.Category(categoryUrlName)
+                .ReturnsViewResult()
+                .ForView("Index");
         }
 
         [Test]
