@@ -89,7 +89,7 @@ namespace Suteki.Shop.HtmlHelpers
 
         private MvcHtmlString WriteCategoryLink(CategoryViewData category)
         {
-            return htmlHelper.ActionLink<ProductController>(c => c.Index(category.CategoryId), category.Name);
+            return htmlHelper.ActionLink<ProductController>(c => c.Category(category.UrlName), category.Name);
         }
     }
 }

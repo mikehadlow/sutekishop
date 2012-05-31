@@ -4,21 +4,34 @@ using System.Linq;
 using Suteki.Common;
 using Suteki.Common.Models;
 using Suteki.Common.Repositories;
+using Suteki.Shop.Models.ModelHelpers;
 using Suteki.Shop.Repositories;
 
 namespace Suteki.Shop
 {
-    public class Category : IActivatable, IOrderable, INamedEntity
+    public class Category : IActivatable, IOrderable, INamedEntity, IUrlNamed
     {
         public virtual int Id { get; set; }
 
+        string name;
         [Required(ErrorMessage = "Name is required")]
-        public virtual string Name { get; set; }
+        public virtual string Name
+        {
+            get { return name; }
+            set
+            {
+                if (name == value) return;
+                name = value;
+                UrlName = Name.ToUrlFriendly();
+            }
+        }
 
         public virtual int Position { get; set; }
         public virtual bool IsActive { get; set; }
         public virtual Image Image { get; set; }
         public virtual Category Parent { get; set; }
+
+        public virtual string UrlName { get; protected set; }
 
         IList<Category> categories = new List<Category>();
         public virtual IList<Category> Categories

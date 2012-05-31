@@ -12,6 +12,7 @@ namespace Suteki.Shop.ViewData
         public int Position { get; set; }
         public bool IsActive { get; set; }
         public int? ImageId { get; set; }
+        public string UrlName { get; set; }
 
         private readonly IList<CategoryViewData> childCategories = new List<CategoryViewData>();
 

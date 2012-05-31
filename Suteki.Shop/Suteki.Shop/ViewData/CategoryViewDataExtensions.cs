@@ -22,7 +22,9 @@ namespace Suteki.Shop.ViewData
                     ParentId = category.Parent == null ? null : (int?)category.Parent.Id,
                     Position = category.Position,
                     IsActive = category.IsActive,
-                    ImageId = category.Image == null ? null : (int?)category.Image.Id
+                    ImageId = category.Image == null ? null : (int?)category.Image.Id,
+                    UrlName = category.UrlName
+
                 }).ToList();
 
             // tie parents to children
