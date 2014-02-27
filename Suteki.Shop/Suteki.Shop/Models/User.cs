@@ -64,8 +64,15 @@ namespace Suteki.Shop
         {
             get
             {
-                var isAuthenticated = Role.Name != Role.Guest.Name;
-                return new Identity(isAuthenticated, Email);
+                try
+                {
+                    var isAuthenticated = Role.Name != Role.Guest.Name;
+                    return new Identity(isAuthenticated, Email);
+                }
+                catch (NHibernate.LazyInitializationException)
+                {
+                    return new Identity(false, "");
+                }
             }
         }
 

@@ -46,9 +46,6 @@ namespace Suteki.Shop.Routes
             routes.MapRoute("Rsd",
                 "rsd.xml",
                 new { controller = "Rsd", action = "Index" });
-            routes.MapRoute("Default",
-                            "{controller}/{action}/{id}",
-                            new {Controller = "Home", action = "index", id = UrlParameter.Optional});
         }
     }
 }
