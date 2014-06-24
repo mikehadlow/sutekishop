@@ -12,3 +12,6 @@
     <!-- FancyBox -->
     <link rel="stylesheet" href="<%= Url.Content("~/Content/" + "fancybox/source/jquery.fancybox.css?v=2.0.6") %>" type="text/css" media="screen" />
     <script type="text/javascript" src="<%= Url.Content("~/Content/" + "fancybox/source/jquery.fancybox.pack.js?v=2.0.6") %>"></script>
+    
+    <link rel="stylesheet" href="<%= Url.Content("~/Content/" + "bjqs/bjqs.css") %>" type="text/css" />
+    <script type="text/javascript" src="<%= Url.Content("~/Content/" + "bjqs/bjqs-1.3.min.js") %>"></script>
