@@ -1,6 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{03323D59-3F64-4575-8A39-BCA8978E8AE0}"
+	ProjectSection(SolutionItems) = preProject
+		Version.cs = Version.cs
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Suteki.Common", "Suteki.Common\Suteki.Common.csproj", "{5A734DD0-928C-4A1E-8D12-7DDD607D89C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Suteki.Common.Tests", "Suteki.Common.Tests\Suteki.Common.Tests.csproj", "{DF5362C9-C088-46DD-9678-0767DA6F6AC2}"
@@ -10,11 +17,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Suteki.Shop.Tests", "Suteki.Shop.Tests\Suteki.Shop.Tests.csproj", "{BDAF0170-0C95-4C04-B444-8CC2F94FEF7F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Suteki.Shop.CreateDb", "Suteki.Shop.CreateDb\Suteki.Shop.CreateDb.csproj", "{88FDD9C3-624D-4A81-A4F0-B13FFB2E07E3}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{03323D59-3F64-4575-8A39-BCA8978E8AE0}"
-	ProjectSection(SolutionItems) = preProject
-		Version.cs = Version.cs
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Suteki.Shop.StockControl.AddIn", "Suteki.Shop.StockControl.AddIn\Suteki.Shop.StockControl.AddIn.csproj", "{6B14E997-8933-4AAD-A0D1-ACDBBBE43066}"
 EndProject
