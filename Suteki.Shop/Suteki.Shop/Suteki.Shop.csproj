@@ -23,6 +23,10 @@
     <TargetFrameworkProfile />
     <UseIISExpress>false</UseIISExpress>
     <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -814,6 +818,7 @@
     <Content Include="wlwmanifest.xml" />
     <Content Include="ProductPhotos\Web.config" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\JumpTheGun.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Suteki.Common\Suteki.Common.csproj">
