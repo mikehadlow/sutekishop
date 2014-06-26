@@ -17,6 +17,7 @@ namespace Suteki.Shop.Maps
             Map(x => x.Note).Text();
             Map(x => x.ContactMe);
             Map(x => x.TrackingNumber);
+            Map(x => x.Problem);
 
             References(x => x.Card).Cascade.All();
             References(x => x.CardContact).Cascade.All();

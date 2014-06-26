@@ -152,5 +152,15 @@ namespace Suteki.Shop.Controllers
                 .WithCardTypes(cardTypeRepository.GetAll())
                 .WithOrder(order);
         }
+
+		[AcceptVerbs(HttpVerbs.Post), AdministratorsOnly, UnitOfWork, ModelStateToTempData]
+        public ActionResult UpdateProblemCustomer(Order order)
+        {
+			if(ModelState.IsValid)
+			{
+				Message = "Problem Customer Status Updated.";
+			}
+			return this.RedirectToAction(c => c.Item(order.Id));
+        }
     }
 }

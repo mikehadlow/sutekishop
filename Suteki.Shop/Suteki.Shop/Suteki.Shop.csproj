@@ -674,6 +674,7 @@
     <Content Include="Views\PostageDetail\ReadOnly.ascx" />
     <Content Include="Views\Product\ItemNotAvailable.aspx" />
     <Content Include="Views\Reviews\AllApproved.aspx" />
+    <Content Include="Views\Shared\Problem.ascx" />
     <Content Include="Views\Shared\TrackingNumber.ascx" />
     <Content Include="Views\Stock\ProductStock.ascx" />
     <Content Include="Web.config">

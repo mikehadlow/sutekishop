@@ -17,15 +17,19 @@
 <% if(User.IsAdministrator()) { %>
     <% Html.RenderAction<OrderAdjustmentController>(c => c.Add(Model.Order)); %>
 	<% Html.RenderPartial("Note"); %>
-	<hr />
+    <% Html.RenderPartial("TrackingNumber"); %>
 <% } %>
-
-<% Html.RenderPartial("TrackingNumber"); %>
+    
+<hr />
 
 <% Html.RenderPartial("~/Views/Order/CustomerDetails.ascx"); %>
 
+<% if(User.IsAdministrator()) { %>
+    <% Html.RenderPartial("Problem"); %>
+	<hr />
+<% } %>
+
 <div class="clear"></div>         
-<hr />
 
 <% Html.RenderPartial("~/Views/Order/PaymentDetails.ascx"); %>
 
