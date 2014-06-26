@@ -10,6 +10,9 @@ namespace Suteki.Shop
         public Contact()
         {
             // initialise non-required properties to empty strings
+            Firstname = "";
+            Lastname = "";
+            Address1 = "";
             Address2 = "";
             Address3 = "";
             Town = "";
@@ -20,15 +23,15 @@ namespace Suteki.Shop
 
         public virtual int Id { get; set; }
 
-        [Required(ErrorMessage = "First Name is required")]
+//        [Required(ErrorMessage = "First Name is required")]
         [StringLength(50, ErrorMessage = "First Name must not be longer than 50 characters")]
         public virtual string Firstname { get; set; }
 
-        [Required(ErrorMessage = "Last Name is required")]
+//        [Required(ErrorMessage = "Last Name is required")]
         [StringLength(50, ErrorMessage = "Last Name must not be longer than 50 characters")]
         public virtual string Lastname { get; set; }
 
-        [Required(ErrorMessage = "Address Line 1 is required")]
+//        [Required(ErrorMessage = "Address Line 1 is required")]
         [StringLength(100, ErrorMessage = "Address Line 1 must not be longer than 100 characters")]
         public virtual string Address1 { get; set; }
 

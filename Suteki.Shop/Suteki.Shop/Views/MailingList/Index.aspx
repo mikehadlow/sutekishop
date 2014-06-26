@@ -13,6 +13,18 @@
 	<% using(Html.BeginForm()) { %>
 	 <table>
             <tr>
+                <td class="label"><label for=<%= this.IdFor(x => x.MailingListSubscription.Email) %>>Email</label></td>
+                <td class="field"><%= this.TextBox(x => x.MailingListSubscription.Email) %></td>
+            </tr>
+            <tr>
+                <td class="label"><label for="emailconfirm">Confirm Email</label></td>
+                <td class="field"><%= Html.TextBox("emailconfirm") %></td>
+            </tr>
+            <tr>
+                <td class="label"></td>
+                <td class="field">All the fields below are optional.</td>
+            </tr>
+            <tr>
                 <td class="label"><label for="<%= this.IdFor(x => x.MailingListSubscription.Contact.Firstname) %>">First Name</label></td>
                 <td class="field"><%= this.TextBox(x => x.MailingListSubscription.Contact.Firstname) %> </td>
             </tr>
@@ -51,14 +63,6 @@
             <tr>
                 <td class="label"><label for="<%= this.IdFor(x => x.MailingListSubscription.Contact.Telephone) %>">Telephone</label></td>
                 <td class="field"><%= this.TextBox(x => x.MailingListSubscription.Contact.Telephone) %></td>
-            </tr>
-            <tr>
-                <td class="label"><label for=<%= this.IdFor(x => x.MailingListSubscription.Email) %>>Email</label></td>
-                <td class="field"><%= this.TextBox(x => x.MailingListSubscription.Email) %></td>
-            </tr>
-            <tr>
-                <td class="label"><label for="emailconfirm">Confirm Email</label></td>
-                <td class="field"><%= Html.TextBox("emailconfirm") %></td>
             </tr>
         </table>
         
