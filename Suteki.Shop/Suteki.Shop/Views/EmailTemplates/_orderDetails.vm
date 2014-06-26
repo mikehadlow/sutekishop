@@ -99,6 +99,10 @@
 		<dl>
 			<dt>Additional Information</dt><dd>$order.AdditionalInformation &nbsp;</dd>
 		</dl>
+    <dl>
+      <dt>Tracking Number</dt>
+      <dd>$order.TrackingNumber &nbsp;</dd>
+    </dl>
 	</div>      
 </div>
 

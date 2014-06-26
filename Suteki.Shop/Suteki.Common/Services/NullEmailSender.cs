@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Suteki.Common.Services
 {
@@ -19,11 +20,13 @@ namespace Suteki.Common.Services
     	public void Send(string toAddress, string subject, string body, bool isBodyHtml)
     	{
 			// do nothing
+            File.WriteAllText(string.Format("C:\\TEMP\\{0}.txt", toAddress.Replace("@", "_at_")), body);
     	}
 
     	public void Send(string[] toAddress, string subject, string body, bool isBodyHtml)
     	{
 			// do nothing
+            File.WriteAllText(string.Format("C:\\TEMP\\{0}.txt", toAddress[0].Replace("@", "_at_")), body);
     	}
     }
 }

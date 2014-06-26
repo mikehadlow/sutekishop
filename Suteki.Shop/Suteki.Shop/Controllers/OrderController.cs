@@ -132,6 +132,16 @@ namespace Suteki.Shop.Controllers
 			}
 			return this.RedirectToAction(c => c.Item(order.Id));
 		}
+        
+		[AcceptVerbs(HttpVerbs.Post), AdministratorsOnly, UnitOfWork, ModelStateToTempData]
+		public ActionResult UpdateTrackingNumber(Order order)
+		{
+			if(ModelState.IsValid)
+			{
+				Message = "Tracking number successfully updated.";
+			}
+			return this.RedirectToAction(c => c.Item(order.Id));
+		}
 
         private ShopViewData CheckoutViewData(Order order)
         {

@@ -36,6 +36,9 @@ namespace Suteki.Shop
         public virtual User User { get; set; }
         public virtual User ModifiedBy { get; set; }
 
+        [StringLength(250, ErrorMessage = "Tracking number must not be longer than 250 characters")]
+        public virtual string TrackingNumber { get; set; }
+
         private IList<OrderLine> orderLines = new List<OrderLine>();
         public virtual IList<OrderLine> OrderLines
         {

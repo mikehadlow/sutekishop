@@ -20,6 +20,8 @@
 	<hr />
 <% } %>
 
+<% Html.RenderPartial("TrackingNumber"); %>
+
 <% Html.RenderPartial("~/Views/Order/CustomerDetails.ascx"); %>
 
 <div class="clear"></div>         
