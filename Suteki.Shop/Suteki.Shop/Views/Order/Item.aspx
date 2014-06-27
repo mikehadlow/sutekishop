@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
 <% if(User.IsAdministrator()) { %>
 <h1>Order</h1>
+    <% Html.RenderAction<ProblemCustomerController>(c => c.Index(Model.Order)); %>
 <% } else { %>
 <h1>Order Confirmation</h1>
 <% } %>

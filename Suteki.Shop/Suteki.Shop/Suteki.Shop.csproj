@@ -195,6 +195,7 @@
     <Compile Include="Controllers\PostageController.cs" />
     <Compile Include="Controllers\PostageDetailController.cs" />
     <Compile Include="Controllers\PostZoneController.cs" />
+    <Compile Include="Controllers\ProblemCustomerController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProductCopyController.cs" />
     <Compile Include="Controllers\ProductImageController.cs" />
@@ -672,6 +673,7 @@
     <Content Include="Views\OrderAdjustment\Add.ascx" />
     <Content Include="Views\PostageDetail\Index.ascx" />
     <Content Include="Views\PostageDetail\ReadOnly.ascx" />
+    <Content Include="Views\ProblemCustomer\Index.ascx" />
     <Content Include="Views\Product\ItemNotAvailable.aspx" />
     <Content Include="Views\Reviews\AllApproved.aspx" />
     <Content Include="Views\Shared\Problem.ascx" />
