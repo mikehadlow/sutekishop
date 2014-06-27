@@ -50,7 +50,8 @@ namespace Suteki.Shop.Services
                 OrderStatus = OrderStatus.Pending,
                 UseCardHolderContact = checkoutViewData.UseCardholderContact,
                 PayByTelephone = checkoutViewData.PayByTelephone,
-                User = userService.CurrentUser
+                User = userService.CurrentUser,
+                Referer = checkoutViewData.Referer
             };
 
             AddOrderLinesFromBasket(order, basket);

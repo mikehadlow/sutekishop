@@ -104,7 +104,8 @@ namespace Suteki.Shop.Controllers
 	            CardCardType = CardType.VisaDeltaElectron,
 	            CardContactCountry = basket.Country,
 	            DeliveryContactCountry = basket.Country,
-	            UseCardholderContact = true
+	            UseCardholderContact = true,
+                Referer = new Referer { Id = 1, }
 	        };
 	    }
 	}

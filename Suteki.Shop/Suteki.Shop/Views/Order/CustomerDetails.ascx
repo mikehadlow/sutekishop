@@ -52,5 +52,6 @@
 </div>
 <div class="clear">
     <h3>Additional Information</h3>
+    <p>How did you hear about us? <%= ViewData.Model.Order.Referer.Name %></p>
     <p><%= ViewData.Model.Order.AdditionalInformation %></p>
 </div>

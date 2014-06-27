@@ -70,5 +70,9 @@ namespace Suteki.Shop.ViewData
         // contact agreement
 
         public bool ContactMe { get; set; }
+
+        // Where did you hear from us?
+
+        public Referer Referer { get; set; }
     }
 }

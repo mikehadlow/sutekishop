@@ -59,6 +59,10 @@
                 <td class="label"><label for="EmailConfirm">Confirm Email</label></td>
                 <td class="field"><%= Html.TextBoxFor(m => m.EmailConfirm)%></td>
             </tr>
+            <tr>
+                <td class="label"><label for="Referer.Id">How Did You Hear About Us?</label></td>
+                <td class="field"><%= Html.ComboFor(m => m.Referer)%></td>
+            </tr>
         </table>
     </div>
     <div class="contentRightColumn">

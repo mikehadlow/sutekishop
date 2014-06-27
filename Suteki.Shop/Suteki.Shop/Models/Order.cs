@@ -40,6 +40,7 @@ namespace Suteki.Shop
         public virtual string TrackingNumber { get; set; }
 
         public virtual bool Problem { get; set; }
+        public virtual Referer Referer { get; set; }
 
         private IList<OrderLine> orderLines = new List<OrderLine>();
         public virtual IList<OrderLine> OrderLines

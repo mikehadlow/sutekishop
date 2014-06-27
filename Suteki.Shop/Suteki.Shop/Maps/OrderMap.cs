@@ -25,6 +25,7 @@ namespace Suteki.Shop.Maps
             References(x => x.OrderStatus);
             References(x => x.ModifiedBy).Cascade.All();
             References(x => x.User).Cascade.All();
+            References(x => x.Referer);
 
             HasMany(x => x.OrderLines).Cascade.AllDeleteOrphan();
             HasMany(x => x.Adjustments).Cascade.AllDeleteOrphan();
