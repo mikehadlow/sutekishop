@@ -45,6 +45,9 @@
                     <li>
 						<%= Html.ActionLink<MailingListController>(c => c.List(null), "Mailing List") %>
                     </li>
+                    <li>
+						<%= Html.ActionLink<RefererController>(c => c.Index(null), "Hear From Us?") %>
+                    </li>
                 </ul>
             </div>
             
