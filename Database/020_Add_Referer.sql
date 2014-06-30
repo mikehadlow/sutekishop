@@ -20,3 +20,9 @@ GO
 ALTER TABLE [dbo].[Order]  WITH CHECK ADD  CONSTRAINT [FK_Order_Referer_RefererId] FOREIGN KEY([RefererId])
 REFERENCES [dbo].[Referer] ([RefererId])
 GO
+
+insert dbo.Referer (Name, Position, IsActive) values ('Don''t know', 1, 1)
+GO
+
+update dbo.[Order] set RefererId = 1
+GO

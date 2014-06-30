@@ -99,11 +99,13 @@
 		<dl>
 			<dt>Additional Information</dt><dd>$order.AdditionalInformation &nbsp;</dd>
 		</dl>
+    #if($order.TrackingNumber)
     <dl>
       <dt>Tracking Number</dt>
       <dd>$order.TrackingNumber &nbsp;</dd>
     </dl>
-	</div>      
+    #end
+  </div>      
 </div>
 
 <div class="clear"></div>         
