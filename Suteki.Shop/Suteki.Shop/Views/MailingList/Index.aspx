@@ -20,6 +20,7 @@
                 <td class="label"><label for="emailconfirm">Confirm Email</label></td>
                 <td class="field"><%= Html.TextBox("emailconfirm") %></td>
             </tr>
+         <!--
             <tr>
                 <td class="label"></td>
                 <td class="field">All the fields below are optional.</td>
@@ -64,6 +65,7 @@
                 <td class="label"><label for="<%= this.IdFor(x => x.MailingListSubscription.Contact.Telephone) %>">Telephone</label></td>
                 <td class="field"><%= this.TextBox(x => x.MailingListSubscription.Contact.Telephone) %></td>
             </tr>
+             -->
         </table>
         
         <input type="submit" value="Sign Up" />
