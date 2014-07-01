@@ -100,8 +100,9 @@
 			<dt>Additional Information</dt><dd>$order.AdditionalInformation &nbsp;</dd>
 		</dl>
     #if($order.TrackingNumber)
+    <br/>
     <dl>
-      <dt>Tracking Number</dt>
+      <dt>Tracking Number<br/> (Please copy and paste this number into the search box on the relevant courier's tracking page)</dt>
       <dd>$order.TrackingNumber &nbsp;</dd>
     </dl>
     #end
