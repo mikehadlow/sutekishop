@@ -10,6 +10,8 @@ namespace Suteki.Shop.Maps
             Map(x => x.Name);
             Map(x => x.Position);
             Map(x => x.IsActive);
+
+            HasMany(x => x.Orders);
         }
     }
 }

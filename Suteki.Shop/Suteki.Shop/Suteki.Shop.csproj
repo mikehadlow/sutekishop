@@ -368,6 +368,7 @@
     <Compile Include="ViewData\CmsViewData.cs" />
     <Compile Include="ViewData\CommentAnswerViewData.cs" />
     <Compile Include="ViewData\HeaderViewData.cs" />
+    <Compile Include="ViewData\HowDidYouHearOfUsViewModel.cs" />
     <Compile Include="ViewData\PostageResultViewData.cs" />
     <Compile Include="ViewData\ProductViewData.cs" />
     <Compile Include="ViewData\RsdViewData.cs" />
@@ -680,6 +681,7 @@
     <Content Include="Views\Product\ItemNotAvailable.aspx" />
     <Content Include="Views\Referer\Edit.aspx" />
     <Content Include="Views\Referer\Index.aspx" />
+    <Content Include="Views\Report\HowDidYouHearOfUs.aspx" />
     <Content Include="Views\Reviews\AllApproved.aspx" />
     <Content Include="Views\Shared\Problem.ascx" />
     <Content Include="Views\Shared\TrackingNumber.ascx" />

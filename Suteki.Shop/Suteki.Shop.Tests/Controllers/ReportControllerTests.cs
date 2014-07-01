@@ -18,13 +18,16 @@ namespace Suteki.Shop.Tests.Controllers
         ReportController reportController;
         IRepository<Order> orderRepository;
     	IRepository<MailingListSubscription> mailingListRepository;
+        IRepository<Referer> refererRepository;
 
     	[SetUp]
         public void SetUp()
         {
             orderRepository = MockRepository.GenerateStub<IRepository<Order>>();
 			mailingListRepository = MockRepository.GenerateStub<IRepository<MailingListSubscription>>();
-            reportController = new ReportController(orderRepository, mailingListRepository);
+    	    refererRepository = MockRepository.GenerateStub<IRepository<Referer>>();
+
+            reportController = new ReportController(orderRepository, mailingListRepository, refererRepository);
         }
 
         [Test]

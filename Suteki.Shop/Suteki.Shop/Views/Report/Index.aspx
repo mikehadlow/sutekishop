@@ -7,6 +7,7 @@
 	<li><%= Html.ActionLink<ReportController>(c => c.Orders(), "Orders") %></li>
 	<li><%= Html.ActionLink<ReportController>(c => c.MailingListSubscriptions(), "Mailing List Subscriptions") %></li>
 	<li><%= Html.ActionLink<ReportController>(c => c.MailingListEmails(), "Mailing List Subscriptions (Emails Only)") %></li>
+	<li><%= Html.ActionLink<ReportController>(c => c.HowDidYouHearOfUs(), "How Did You Hear Of Us Report.") %></li>
 </ul>
 
 
