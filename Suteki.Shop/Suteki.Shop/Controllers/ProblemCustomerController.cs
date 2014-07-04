@@ -26,8 +26,7 @@ namespace Suteki.Shop.Controllers
                     (   
                         (x.CardContact.Firstname == order.CardContact.Firstname &&
                         x.CardContact.Lastname == order.CardContact.Lastname) ||
-                        x.Email == order.Email ||
-                        x.CardContact.Postcode == order.CardContact.Postcode
+                        x.Email == order.Email
                     ));
             return View("Index", customers.ToList());
         }
