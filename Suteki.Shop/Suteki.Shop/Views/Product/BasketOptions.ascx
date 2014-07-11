@@ -10,7 +10,7 @@
     <% } %>
 
     <label for="quantity">Quantity</label>
-    <%= Html.DropDownList("basketItem.Quantity", new SelectList(1.To(10).Select(i => new { Value = i }), "Value", "Value")) %>
+    <%= Html.DropDownList("basketItem.Quantity", new SelectList(1.To(50).Select(i => new { Value = i }), "Value", "Value")) %>
     <%= Html.SubmitButton("addToBasket", "Add to basket")%>
 <% } %>
 </div>

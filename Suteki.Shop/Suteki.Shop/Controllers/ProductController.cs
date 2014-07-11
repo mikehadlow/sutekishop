@@ -55,6 +55,11 @@ namespace Suteki.Shop.Controllers
             return RenderIndexView(urlName);
         }
 
+	    public ActionResult RootCategory()
+	    {
+	        return RenderIndexView(1);
+	    }
+
         ActionResult RenderIndexView(string urlName)
         {
             var category = categoryRepository.GetAll().WithUrlName(urlName);

@@ -70,11 +70,26 @@ namespace Suteki.Shop
             }
         }
 
+        public virtual bool HasChildCategories
+        {
+            get { return categories.Any(c => c.IsActive); }
+        }
+
+        public virtual bool HasProductImage
+        {
+            get { return HasActiveProducts && Products.InOrder().Active().First().HasMainImage; }
+        }
+
+        public virtual bool HasChildCategoryImage
+        {
+            get { return HasChildCategories && Categories.InOrder().Active().First().HasMainImage; }
+        }
+
         public virtual bool HasMainImage
         {
             get
             {
-                return HasActiveProducts && Products.InOrder().Active().First().HasMainImage;
+                return HasProductImage || HasChildCategoryImage;
             }
         }
 
@@ -82,7 +97,11 @@ namespace Suteki.Shop
         {
             get
             {
-                return HasMainImage ? Products.InOrder().Active().First().MainImage : null;
+                return HasProductImage
+                    ? Products.InOrder().Active().First().MainImage
+                    : HasChildCategoryImage
+                        ? Categories.InOrder().Active().First().MainImage
+                        : null;
             }
         }
 
