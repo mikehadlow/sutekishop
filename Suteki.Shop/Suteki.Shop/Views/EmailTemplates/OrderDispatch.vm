@@ -3,17 +3,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>Order Confirmation</title>
-    <link href="http://static.jumpthegun.co.uk.s3.amazonaws.com/utility/Site.css" rel="stylesheet" type="text/css" />
-    <link href="http://static.jumpthegun.co.uk.s3.amazonaws.com/utility/Print.css" rel="stylesheet" type="text/css" />
+    <link href="http://static.jumpthegun.co.uk.s3.amazonaws.com/Site.css" rel="stylesheet" type="text/css" />
+    <link href="http://static.jumpthegun.co.uk.s3.amazonaws.com/Print.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class="print">
-		<div class="invoiceHeader">
-			<img src="http://s3.amazonaws.com/static.jumpthegun.co.uk/utility_invoice_header.jpg" />
-		</div>
-		<h1>Order Shipped</h1>		
+		<h1>Order Dispatched</h1>		
 		<p>
-			Many thanks for your order which has now been sent. Best regards, $shopName.
+			Many thanks  for your order which has now been despatched. Best regards, $shopName.
 		</p>
 		#parse("_orderDetails.vm")
     </div>

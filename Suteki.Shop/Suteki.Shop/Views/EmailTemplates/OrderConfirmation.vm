@@ -8,9 +8,6 @@
 </head>
 <body>
     <div class="print">
-		<div class="invoiceHeader">
-			<img src="http://s3.amazonaws.com/static.jumpthegun.co.uk/utility_invoice_header.jpg" />
-		</div>
 		<h1>Order Confirmation</h1>		
 		#parse("_orderDetails.vm")
     </div>
