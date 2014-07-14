@@ -299,6 +299,9 @@
     <Compile Include="Models\OrderLine.cs" />
     <Compile Include="Models\OrderSearchCriteria.cs" />
     <Compile Include="Models\OrderStatus.cs" />
+    <Compile Include="Models\Outfit.cs" />
+    <Compile Include="Models\OutfitImage.cs" />
+    <Compile Include="Models\OutfitProduct.cs" />
     <Compile Include="Models\Postage.cs" />
     <Compile Include="Models\PostageResult.cs" />
     <Compile Include="Models\PostZone.cs" />
