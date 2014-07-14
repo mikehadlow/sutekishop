@@ -257,6 +257,9 @@
     <Compile Include="Maps\OrderLineMap.cs" />
     <Compile Include="Maps\OrderMap.cs" />
     <Compile Include="Maps\OrderStatusMap.cs" />
+    <Compile Include="Maps\OutfitImageMap.cs" />
+    <Compile Include="Maps\OutfitMap.cs" />
+    <Compile Include="Maps\OutfitProductMap.cs" />
     <Compile Include="Maps\PostageMap.cs" />
     <Compile Include="Maps\PostageResultMap.cs" />
     <Compile Include="Maps\PostZoneMap.cs" />
