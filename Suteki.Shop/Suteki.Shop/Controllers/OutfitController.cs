@@ -5,7 +5,9 @@ using System.Web.Mvc;
 using MvcContrib;
 using Suteki.Common.Filters;
 using Suteki.Common.Repositories;
+using Suteki.Common.Services;
 using Suteki.Shop.Filters;
+using Suteki.Shop.Repositories;
 using Suteki.Shop.Services;
 
 namespace Suteki.Shop.Controllers
@@ -16,20 +18,22 @@ namespace Suteki.Shop.Controllers
         private readonly IRepository<Product> productRepository;
 		private readonly IUnitOfWorkManager uow;
         private readonly IHttpFileService httpFileService;
+        private readonly IOrderableService<OutfitImage> imageOrderableService; 
 
-        public OutfitController(IRepository<Outfit> outfitRepository, IUnitOfWorkManager uow, IRepository<Product> productRepository, IHttpFileService httpFileService)
+        public OutfitController(IRepository<Outfit> outfitRepository, IUnitOfWorkManager uow, IRepository<Product> productRepository, IHttpFileService httpFileService, IOrderableService<OutfitImage> imageOrderableService)
         {
             this.outfitRepository = outfitRepository;
             this.uow = uow;
             this.productRepository = productRepository;
             this.httpFileService = httpFileService;
+            this.imageOrderableService = imageOrderableService;
         }
 
         [HttpGet]
         [UnitOfWork]
         public ActionResult Index()
         {
-            var outfits = new List<Outfit>();
+            var outfits = outfitRepository.GetAll().Active();
             return View("Index", outfits);
         }
 
@@ -135,30 +139,49 @@ namespace Suteki.Shop.Controllers
                 ImageDefinition.ProductImage,
                 ImageDefinition.ProductThumbnail);
 
+            var position = imageOrderableService.NextPosition;
             foreach (var image in images)
             {
                 outfit.OutfitImages.Add(new OutfitImage
                 {
                     Image = image,
                     Outfit = outfit,
-                    Position = 0
+                    Position = position
                 });
+                position++;
             }
         }
 
+		[AdministratorsOnly, UnitOfWork]
         public ActionResult MoveImageUp(int id, int position)
         {
-            throw new NotImplementedException();
+            imageOrderableService
+                .MoveItemAtPosition(position)
+                .ConstrainedBy(x => x.Outfit.Id == id)
+                .UpOne();
+            return this.RedirectToAction(x => x.Edit(id));
         }
 
+		[AdministratorsOnly, UnitOfWork]
         public ActionResult MoveImageDown(int id, int position)
         {
-            throw new NotImplementedException();
+            imageOrderableService
+                .MoveItemAtPosition(position)
+                .ConstrainedBy(x => x.Outfit.Id == id)
+                .DownOne();
+            return this.RedirectToAction(x => x.Edit(id));
         }
 
-        public void DeleteImage(int id, int outfitImageId)
+		[AdministratorsOnly, UnitOfWork]
+        public ActionResult DeleteImage(int id, int outfitImageId)
         {
-            throw new NotImplementedException();
+            var outfit = outfitRepository.GetById(id);
+            var outfitImage = outfit.OutfitImages.SingleOrDefault(x => x.Id == outfitImageId);
+            if (outfitImage != null)
+            {
+                outfit.OutfitImages.Remove(outfitImage);
+            }
+            return this.RedirectToAction(x => x.Edit(id));
         }
     }
 }
