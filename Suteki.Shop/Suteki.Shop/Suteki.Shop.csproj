@@ -192,6 +192,7 @@
     <Compile Include="Controllers\OrderAdjustmentController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\OrderStatusController.cs" />
+    <Compile Include="Controllers\OutfitController.cs" />
     <Compile Include="Controllers\PostageController.cs" />
     <Compile Include="Controllers\PostageDetailController.cs" />
     <Compile Include="Controllers\PostZoneController.cs" />
@@ -681,6 +682,10 @@
     <Content Include="Views\Header\Header.ascx" />
     <Content Include="Views\Header\PageEnd.ascx" />
     <Content Include="Views\OrderAdjustment\Add.ascx" />
+    <Content Include="Views\Outfit\Edit.aspx" />
+    <Content Include="Views\Outfit\Index.aspx" />
+    <Content Include="Views\Outfit\Item.aspx" />
+    <Content Include="Views\Outfit\Product.ascx" />
     <Content Include="Views\PostageDetail\Index.ascx" />
     <Content Include="Views\PostageDetail\ReadOnly.ascx" />
     <Content Include="Views\ProblemCustomer\Index.ascx" />

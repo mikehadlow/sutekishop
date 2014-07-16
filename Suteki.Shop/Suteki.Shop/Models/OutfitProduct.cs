@@ -5,9 +5,9 @@ namespace Suteki.Shop
 {
     public class OutfitProduct : IOrderable, IEntity
     {
-        public int Position { get; set; }
-        public int Id { get; set; }
-        public Outfit Outfit { get; set; }
-        public Product Product { get; set; }
+        public virtual int Position { get; set; }
+        public virtual int Id { get; set; }
+        public virtual Outfit Outfit { get; set; }
+        public virtual Product Product { get; set; }
     }
 }
