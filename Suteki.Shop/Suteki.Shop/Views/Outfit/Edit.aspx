@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     
-<div><h1>Outfit Edit</h1>
+<div style="overflow: hidden; zoom: 1;"><h1>Outfit Edit</h1>
 <%= Html.ValidationSummary() %>
 
     <% using (Html.MultipartForm()) { %>
@@ -10,8 +10,14 @@
 		<%= this.Hidden(x => x.Position) %>
 		<%= this.TextBox(x => x.Name).Label("Name") %>
         <%= this.TextArea(x => x.Description).Label("Description") %>
-        <label for="ProductIds">Select products for this outfit</label>
-        <%= Html.MutipleSelectComboFor<Outfit, Product>("ProductIds", Model.ProductIds)%>
+
+        <h3>Products</h3>
+        <% foreach (var outfitProduct in Model.OutfitProducts) { %>
+            <%= Html.CrossLink<OutfitController>(c => c.DeleteProduct(Model.Id, outfitProduct.Id)) %>
+            <%= Html.ActionLink<ProductController>(x => x.Item(outfitProduct.Product.UrlName), outfitProduct.Product.Name) %>
+            <br/>
+        <% } %>
+    
         <%= this.CheckBox(x => x.IsActive).Label("Active") %>
     
         <h3>Images</h3>

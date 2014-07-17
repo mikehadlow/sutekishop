@@ -682,6 +682,7 @@
     <Content Include="Views\Header\Header.ascx" />
     <Content Include="Views\Header\PageEnd.ascx" />
     <Content Include="Views\OrderAdjustment\Add.ascx" />
+    <Content Include="Views\Outfit\AddToOutfit.ascx" />
     <Content Include="Views\Outfit\Edit.aspx" />
     <Content Include="Views\Outfit\Index.aspx" />
     <Content Include="Views\Outfit\Item.aspx" />

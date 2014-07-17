@@ -183,5 +183,47 @@ namespace Suteki.Shop.Controllers
             }
             return this.RedirectToAction(x => x.Edit(id));
         }
+
+		[AdministratorsOnly]
+        [HttpGet]
+        public ActionResult AddToOutfit(int id)
+		{
+		    return View("AddToOutfit", new AddToOutfitViewModel
+		    {
+		        Outfit = new Outfit(),
+                Product = productRepository.GetById(id)
+		    });
+		}
+
+        [AdministratorsOnly, UnitOfWork]
+        [HttpPost]
+        public ActionResult AddToOutfit(AddToOutfitViewModel addToOutfitViewModel)
+        {
+            addToOutfitViewModel.Outfit.OutfitProducts.Add(new OutfitProduct
+            {
+                Outfit = addToOutfitViewModel.Outfit,
+                Product = addToOutfitViewModel.Product,
+                Position = imageOrderableService.NextPosition
+            });
+            return this.RedirectToAction(x => x.Item(addToOutfitViewModel.Outfit.Id));
+        }
+
+        [AdministratorsOnly, UnitOfWork]
+        public ActionResult DeleteProduct(int id, int outfitProductId)
+        {
+            var outfit = outfitRepository.GetById(id);
+            var outfitProduct = outfit.OutfitProducts.SingleOrDefault(x => x.Id == outfitProductId);
+            if (outfitProduct != null)
+            {
+                outfit.OutfitProducts.Remove(outfitProduct);
+            }
+            return this.RedirectToAction(x => x.Edit(id));
+        }
+    }
+
+    public class AddToOutfitViewModel
+    {
+        public Outfit Outfit { get; set; }
+        public Product Product { get; set; }
     }
 }

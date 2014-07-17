@@ -36,7 +36,12 @@
 </a>
  so that we can let you know when it will be available.</p>
 
+<% if(User.IsAdministrator()) { %>
+    <% Html.RenderAction<OutfitController>(x => x.AddToOutfit(Model.Product.Id)); %>
+<% } %>
+    
 <% Html.RenderAction<ReviewsController>(c => c.Show(Model.Product.Id)); %>
+
 
 <% if(User.IsAdministrator()) Html.StockControlUi(Model.Product.UrlName); %>
 
