@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Web.Mvc;
 using MvcContrib;
 using Suteki.Common.Filters;
@@ -62,6 +60,7 @@ namespace Suteki.Shop.Controllers
         {
             if (ModelState.IsValid)
             {
+                UpdateImages(outfit);
                 outfitRepository.SaveOrUpdate(outfit);
                 uow.Commit();
                 return this.RedirectToAction(x => x.Item(outfit.Id));
@@ -95,41 +94,11 @@ namespace Suteki.Shop.Controllers
         {
             if (ModelState.IsValid)
             {
-                UpdateProducts(outfit);
                 UpdateImages(outfit);
 
                 return this.RedirectToAction(x => x.Item(outfit.Id));
             }
             return View("Edit", outfit);
-        }
-
-        private void UpdateProducts(Outfit outfit)
-        {
-            // remove removed products:
-            var outfitProductsToRemove = outfit.OutfitProducts
-                .Where(outfitProduct => outfit.ProductIds.All(x => x != outfitProduct.Product.Id))
-                .ToList();
-
-            foreach (OutfitProduct outfitProduct in outfitProductsToRemove)
-            {
-                outfit.OutfitProducts.Remove(outfitProduct);
-            }
-
-
-            // Add new products:
-            foreach (var productId in outfit.ProductIds)
-            {
-                if (outfit.OutfitProducts.All(x => x.Product.Id != productId))
-                {
-                    var product = productRepository.GetById(productId);
-                    outfit.OutfitProducts.Add(new OutfitProduct
-                    {
-                        Position = 0,
-                        Product = product,
-                        Outfit = outfit
-                    });
-                }
-            }
         }
 
         private void UpdateImages(Outfit outfit)

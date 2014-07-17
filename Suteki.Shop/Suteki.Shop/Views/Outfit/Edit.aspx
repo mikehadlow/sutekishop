@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
     
 <div style="overflow: hidden; zoom: 1;"><h1>Outfit Edit</h1>
+<%= Html.ActionLink<OutfitController>(x => x.Item(Model.Id), "Back to normal view") %>
 <%= Html.ValidationSummary() %>
 
     <% using (Html.MultipartForm()) { %>

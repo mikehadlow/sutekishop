@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
 <div style="overflow: hidden; zoom: 1;">    <h1><%= Model.Name %></h1>
+    <%= Html.ActionLink<OutfitController>(x => x.Index(), "Back to outfits") %>
 
     <% if(User.IsAdministrator()) { %>
         <%= Html.ActionLink<OutfitController>(c => c.Edit(ViewData.Model.Id), "Edit", new { @class = "linkButton" })%>
