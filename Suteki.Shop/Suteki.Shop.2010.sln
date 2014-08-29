@@ -5,6 +5,7 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{03323D59-3F64-4575-8A39-BCA8978E8AE0}"
 	ProjectSection(SolutionItems) = preProject
+		utils\ResizeImages.csx = utils\ResizeImages.csx
 		Version.cs = Version.cs
 	EndProjectSection
 EndProject

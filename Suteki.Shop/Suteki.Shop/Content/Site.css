@@ -440,6 +440,10 @@ div.category ul ul ul
 div.category ul ul li:hover ul
 {display: block;}
 
+.cat-label {
+    height: 30px;
+}
+
 /* basket */
 
 li.basket
