@@ -14,7 +14,7 @@ using Suteki.Shop.Models.ModelHelpers;
 
 namespace Suteki.Shop
 {
-    public class Product : IOrderable, IActivatable, IUrlNamed, INamedEntity
+    public class Product : IOrderable, IActivatable, IUrlNamed, IEntity
     {
         public virtual int Id { get; set; }
 
