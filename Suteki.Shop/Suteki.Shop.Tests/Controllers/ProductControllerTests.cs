@@ -22,7 +22,7 @@ namespace Suteki.Shop.Tests.Controllers
         private ProductController productController;
     	private IRepository<Product> productRepository;
         private IRepository<Category> categoryRepository;
-        private IOrderableService<Product> productOrderableService;
+        private IOrderableService<ProductCategory> productOrderableService;
     	private IUserService userService;
         private IProductBuilder productBuilder;
         private const string urlName = "Product_4";
@@ -38,7 +38,7 @@ namespace Suteki.Shop.Tests.Controllers
 
             productRepository = MockRepositoryBuilder.CreateProductRepository();
 
-            productOrderableService = MockRepository.GenerateStub<IOrderableService<Product>>();
+            productOrderableService = MockRepository.GenerateStub<IOrderableService<ProductCategory>>();
             MockRepository.GenerateStub<IOrderableService<ProductImage>>();
 
         	userService = MockRepository.GenerateStub<IUserService>();

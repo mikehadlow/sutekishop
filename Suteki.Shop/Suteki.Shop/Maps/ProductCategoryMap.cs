@@ -8,6 +8,8 @@ namespace Suteki.Shop.Maps
         {
             Id(x => x.Id);
 
+            Map(x => x.Position);
+
             References(x => x.Product);
             References(x => x.Category);
         }

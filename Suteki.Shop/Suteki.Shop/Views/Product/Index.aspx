@@ -17,8 +17,8 @@
 	<% Html.RenderPartial("SubCategory", category); %>
 <% } %>
 
-<% foreach (var product in ViewData.Model.Products) { %>
-	<% Html.RenderPartial("Product", ShopView.Data.WithProduct(product).WithCategory(Model.Category)); %>
+<% foreach (var productCategory in ViewData.Model.ProductCategories) { %>
+	<% Html.RenderPartial("Product", ShopView.Data.WithProductCategory(productCategory).WithCategory(Model.Category)); %>
 <% } %>
 
 </div>

@@ -1,11 +1,10 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Linq;
 using System.Web.Mvc;
 using MvcContrib;
-using Suteki.Common.Binders;
 using Suteki.Common.Filters;
 using Suteki.Common.Repositories;
 using Suteki.Common.Services;
-using Suteki.Shop.Binders;
 using Suteki.Shop.Extensions;
 using Suteki.Shop.Filters;
 using Suteki.Shop.Repositories;
@@ -19,7 +18,7 @@ namespace Suteki.Shop.Controllers
 	{
 		readonly IRepository<Product> productRepository;
 		readonly IRepository<Category> categoryRepository;
-		readonly IOrderableService<Product> productOrderableService;
+		readonly IOrderableService<ProductCategory> productOrderableService;
 		readonly IUserService userService;
 		readonly IUnitOfWorkManager uow;
 	    readonly IProductBuilder productBuilder;
@@ -27,7 +26,7 @@ namespace Suteki.Shop.Controllers
 		public ProductController(
             IRepository<Product> productRepository, 
             IRepository<Category> categoryRepository, 
-            IOrderableService<Product> productOrderableService, 
+            IOrderableService<ProductCategory> productOrderableService, 
             IUserService userService, 
             IUnitOfWorkManager uow,
             IProductBuilder productBuilder)
@@ -63,35 +62,28 @@ namespace Suteki.Shop.Controllers
         ActionResult RenderIndexView(string urlName)
         {
             var category = categoryRepository.GetAll().WithUrlName(urlName);
-
-			AppendTitle(category.Name);
-
-			var products = category.Products.InOrder();
-
-			if (!userService.CurrentUser.IsAdministrator)
-			{
-				products = products.Active();
-			}
-
-			return View("Index", ShopView.Data.WithProducts(products).WithCategory(category));
+            return RenderIndexView(category);
 		}
 
 		ActionResult RenderIndexView(int id)
 		{
 			var category = categoryRepository.GetById(id);
-            
-
-			AppendTitle(category.Name);
-
-			var products = category.Products.InOrder();
-
-			if (!userService.CurrentUser.IsAdministrator)
-			{
-				products = products.Active();
-			}
-
-			return View("Index", ShopView.Data.WithProducts(products).WithCategory(category));
+		    return RenderIndexView(category);
 		}
+
+	    private ActionResult RenderIndexView(Category category)
+	    {
+            AppendTitle(category.Name);
+
+            var productCategories = category.ProductCategories.InOrder();
+
+            if (!userService.CurrentUser.IsAdministrator)
+            {
+                productCategories = productCategories.Where(x => x.Product.IsActive);
+            }
+
+            return View("Index", ShopView.Data.WithProductCategories(productCategories).WithCategory(category));
+	    }
 
 		public ActionResult Item(string urlName)
 		{
@@ -169,7 +161,7 @@ namespace Suteki.Shop.Controllers
 		{
 			productOrderableService
 				.MoveItemAtPosition(position)
-				.ConstrainedBy(product => product.ProductCategories.Any(pc => pc.Category.Id == id))
+				.ConstrainedBy(product => product.Category.Id == id)
 				.UpOne();
 
 
@@ -181,7 +173,7 @@ namespace Suteki.Shop.Controllers
 		{
 			productOrderableService
 				.MoveItemAtPosition(position)
-                .ConstrainedBy(product => product.ProductCategories.Any(pc => pc.Category.Id == id))
+                .ConstrainedBy(product => product.Category.Id == id)
 				.DownOne();
 
 			return this.RedirectToAction(x => x.Index(id));

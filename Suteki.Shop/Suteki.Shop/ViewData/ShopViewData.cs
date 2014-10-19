@@ -49,6 +49,8 @@ namespace Suteki.Shop.ViewData
 
 		public IPagination<MailingListSubscription> MailingListSubscriptions { get; set; }
 
+        public IEnumerable<ProductCategory> ProductCategories { get; set; }
+
         public bool IsPrint { get; set; }
 
 		public bool HasProducts
@@ -201,6 +203,20 @@ namespace Suteki.Shop.ViewData
 			this.MailingListSubscriptions = subscriptions;
 			return this;
     	}
+
+        public ShopViewData WithProductCategories(IEnumerable<ProductCategory> productCategories)
+        {
+            this.ProductCategories = productCategories;
+            return this;
+        }
+
+        public ShopViewData WithProductCategory(ProductCategory productCategory)
+        {
+            this.ProductCategory = productCategory;
+            return this;
+        }
+
+        public ProductCategory ProductCategory { get; set; }
     }
 
     /// <summary>
