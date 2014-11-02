@@ -17,7 +17,7 @@ namespace Suteki.Shop.Tests.Services
         Product originalProduct;
         Category originalCategory;
         IProductCopyService productCopyService;
-        IOrderableService<Product> productOrder;
+        IOrderableService<ProductCategory> productCategoryOrderableService;
         FakeRepository<Product> productRepository;
 
         [SetUp]
@@ -25,9 +25,9 @@ namespace Suteki.Shop.Tests.Services
         {
             DomainEvent.TurnOff();
 
-            productOrder = MockRepository.GenerateStub<IOrderableService<Product>>();
+            productCategoryOrderableService = MockRepository.GenerateStub<IOrderableService<ProductCategory>>();
             productRepository = new FakeRepository<Product>();
-            productCopyService = new ProductCopyService(productOrder, productRepository);
+            productCopyService = new ProductCopyService(productCategoryOrderableService, productRepository);
 
             originalCategory = new Category();
             originalProduct = CreateProduct(originalCategory);
@@ -63,9 +63,9 @@ namespace Suteki.Shop.Tests.Services
         [Test]
         public void Should_assign_next_position()
         {
-            productOrder.Stub(p => p.NextPosition).Return(11);
+            productCategoryOrderableService.Stub(p => p.NextPosition).Return(11);
             var copiedProduct = productCopyService.Copy(originalProduct);
-            copiedProduct.Position.ShouldEqual(11);
+            copiedProduct.Position.ShouldEqual(0);
         }
 
         [Test]
@@ -125,7 +125,7 @@ namespace Suteki.Shop.Tests.Services
                 Name = "Medium"
             });
 
-            product.AddCategory(category);
+            product.AddCategory(category, 0);
 
             product.AddProductImage(new Image { Id = 3 }, 1);
             return product;

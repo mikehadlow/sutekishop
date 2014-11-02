@@ -1,16 +1,21 @@
 using System;
 using System.Linq;
 using Suteki.Common.Repositories;
+using Suteki.Common.Services;
 
 namespace Suteki.Shop.Services.ProductBuilderContributors
 {
     public class Categories : IProductBuilderContributor
     {
         readonly IRepository<Category> categoryRepository;
+        readonly IOrderableService<ProductCategory> productCategoryOrderableService; 
 
-        public Categories(IRepository<Category> categoryRepository)
+        public Categories(
+            IRepository<Category> categoryRepository, 
+            IOrderableService<ProductCategory> productCategoryOrderableService)
         {
             this.categoryRepository = categoryRepository;
+            this.productCategoryOrderableService = productCategoryOrderableService;
         }
 
         public void ContributeTo(ProductBuildingContext context)
@@ -45,7 +50,8 @@ namespace Suteki.Shop.Services.ProductBuilderContributors
             foreach (var newId in idsToAdd)
             {
                 var category = categoryRepository.GetById(newId);
-                context.Product.AddCategory(category);
+                var position = productCategoryOrderableService.NextPosition;
+                context.Product.AddCategory(category, position);
             }
         }
 

@@ -73,12 +73,9 @@ namespace Suteki.Shop.Tests.Controllers
                 .ReturnsViewResult()
                 .ForView("Index")
                 .WithModel<ShopViewData>()
-                .AssertNotNull(vd => vd.Products)
+                .AssertNotNull(vd => vd.ProductCategories)
                 .AssertNotNull(vd => vd.Category)
                 .AssertAreEqual(categoryId, vd => vd.Category.Id);
-
-            ProductRepositoryExtensionsTests.AssertProductsReturnedBy_WhereCategoryIdIs4_AreCorrect(
-                viewData.Products);
         }
 
         [Test]

@@ -7,12 +7,14 @@ namespace Suteki.Shop.Services
 {
     public class ProductCopyService : IProductCopyService
     {
-        readonly IOrderableService<Product> productOrder;
+        readonly IOrderableService<ProductCategory> productCategoryOrder;
         readonly IRepository<Product> productRepository;
 
-        public ProductCopyService(IOrderableService<Product> productOrder, IRepository<Product> productRepository)
+        public ProductCopyService(
+            IOrderableService<ProductCategory> productCategoryOrder, 
+            IRepository<Product> productRepository)
         {
-            this.productOrder = productOrder;
+            this.productCategoryOrder = productCategoryOrder;
             this.productRepository = productRepository;
         }
 
@@ -33,7 +35,6 @@ namespace Suteki.Shop.Services
             };
 
             ApplyCategories(originalProduct, copiedProduct);
-            SetPosition(copiedProduct);
             CopySizes(originalProduct, copiedProduct);
 
             return copiedProduct;
@@ -52,16 +53,12 @@ namespace Suteki.Shop.Services
             }
         }
 
-        void SetPosition(Product copiedProduct)
-        {
-            copiedProduct.Position = productOrder.NextPosition;
-        }
-
-        static void ApplyCategories(Product originalProduct, Product copiedProduct)
+        void ApplyCategories(Product originalProduct, Product copiedProduct)
         {
             foreach (var productCategory in originalProduct.ProductCategories)
             {
-                copiedProduct.AddCategory(productCategory.Category);
+                var position = productCategoryOrder.NextPosition;
+                copiedProduct.AddCategory(productCategory.Category, position);
             }
         }
 

@@ -99,14 +99,14 @@
 		<dl>
 			<dt>Additional Information</dt><dd>$order.AdditionalInformation &nbsp;</dd>
 		</dl>
-    #if($order.TrackingNumber)
+#if($order.TrackingNumber)
     <br/>
     <dl>
       <dt>Tracking Number<br/> (Please copy and paste this number into the search box on the relevant courier's tracking page)</dt>
       <dd>$order.TrackingNumber &nbsp;</dd>
     </dl>
-    #end
-  </div>      
+#end
+	</div>
 </div>
 
 <div class="clear"></div>         
@@ -119,12 +119,12 @@
 	<div class="contentLeftColumn">
 		#if($order.PayByTelephone)
 			<p>Pay By Telephone</p>
-		#else		        
+		#else		
 		<dl>
 			<dt>Card Type</dt><dd>$order.Card.CardType.Name &nbsp;</dd>
 			<dt>Card Holder</dt><dd>$order.Card.Holder &nbsp;</dd>
 		</dl>
-        #end
+#end
 	</div>
 	<div class="contentRightColumn">
 

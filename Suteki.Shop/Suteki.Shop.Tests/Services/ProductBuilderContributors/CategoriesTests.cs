@@ -1,3 +1,4 @@
+using Suteki.Common.Services;
 // ReSharper disable InconsistentNaming
 using NUnit.Framework;
 using Rhino.Mocks;
@@ -11,11 +12,14 @@ namespace Suteki.Shop.Tests.Services.ProductBuilderContributors
     public class CategoriesTests : ProductBuilderContributorTestBase
     {
         IRepository<Category> categoryRepository;
+        private IOrderableService<ProductCategory> productCategoryOrderableService; 
 
         protected override IProductBuilderContributor InitContributor()
         {
             categoryRepository = MockRepository.GenerateStub<IRepository<Category>>();
-            return new Categories(categoryRepository);
+            productCategoryOrderableService = MockRepository.GenerateStub<IOrderableService<ProductCategory>>();
+
+            return new Categories(categoryRepository, productCategoryOrderableService);
         }
 
         [Test]
@@ -48,8 +52,8 @@ namespace Suteki.Shop.Tests.Services.ProductBuilderContributors
             var category15 = new Category { Id = 15 };
 
             var product = new Product();
-            product.AddCategory(category14);
-            product.AddCategory(category15);
+            product.AddCategory(category14, 0);
+            product.AddCategory(category15, 0);
             context.SetProduct(product);
             context.ProductViewData.CategoryIds.Add(11);
 
@@ -69,8 +73,8 @@ namespace Suteki.Shop.Tests.Services.ProductBuilderContributors
             categoryRepository.Stub(r => r.GetById(16)).Return(category16);
 
             var product = new Product();
-            product.AddCategory(category14);
-            product.AddCategory(category15);
+            product.AddCategory(category14, 0);
+            product.AddCategory(category15, 0);
 
             context.SetProduct(product);
             context.ProductViewData.CategoryIds.Add(15);

@@ -55,7 +55,7 @@ namespace Suteki.Shop.Tests.Maps
                 {
                     product.AddSize(size);
                 }
-                product.AddCategory(category);
+                product.AddCategory(category, 0);
                 product.AddProductImage(image, 1);
                 session.SaveOrUpdate(product);
             });

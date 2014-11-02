@@ -163,9 +163,14 @@ namespace Suteki.Shop
             }
         }
 
-        public virtual void AddCategory(Category category)
+        public virtual void AddCategory(Category category, int position)
         {
-            var productCategory = new ProductCategory {Category = category, Product = this};
+            var productCategory = new ProductCategory
+            {
+                Category = category, 
+                Product = this,
+                Position = position
+            };
             ProductCategories.Add(productCategory);
             category.ProductCategories.Add(productCategory);
         }
